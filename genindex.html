@@ -1,0 +1,913 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Index &mdash; CSE 207 Project 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> CSE 207 Project
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#why-did-we-create-this">Why did we create this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#deliverables">Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#editing-opening-assignments">Editing/Opening Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id2">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.games.html">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game">crypto.games.game module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_bind">crypto.games.game_bind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cca">crypto.games.game_cca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cr">crypto.games.game_cr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_kr">crypto.games.game_kr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_lr">crypto.games.game_lr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_prf">crypto.games.game_prf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_ufcma">crypto.games.game_ufcma module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.simulator.html">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.base_sim">crypto.simulator.base_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.world_sim">crypto.simulator.world_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.primitives.html">Primitives</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CSE 207 Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.add_int_to_string">add_int_to_string() (in module crypto.tools)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.primitives.html#crypto.primitives.AES">AES() (in module crypto.primitives)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.primitives.html#crypto.primitives.AES_I">AES_I() (in module crypto.primitives)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.base_sim.BaseSim">BaseSim (class in crypto.simulator.base_sim)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.bind_sim.BINDSim">BINDSim (class in crypto.simulator.bind_sim)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.block_cipher.BlockCipher">BlockCipher (class in crypto.abstract.block_cipher)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.cca_sim.CCASim">CCASim (class in crypto.simulator.cca_sim)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.bind_sim.BINDSim.compute_advantage">compute_advantage() (crypto.simulator.bind_sim.BINDSim method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cca_sim.CCASim.compute_advantage">(crypto.simulator.cca_sim.CCASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cr_sim.CRSim.compute_advantage">(crypto.simulator.cr_sim.CRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ctxt_sim.CTXTSim.compute_advantage">(crypto.simulator.ctxt_sim.CTXTSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.kr_sim.KRSim.compute_advantage">(crypto.simulator.kr_sim.KRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.lr_sim.LRSim.compute_advantage">(crypto.simulator.lr_sim.LRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ufcma_sim.UFCMASim.compute_advantage">(crypto.simulator.ufcma_sim.UFCMASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.world_sim.WorldSim.compute_advantage">(crypto.simulator.world_sim.WorldSim method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.bind_sim.BINDSim.compute_success_ratio">compute_success_ratio() (crypto.simulator.bind_sim.BINDSim method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cca_sim.CCASim.compute_success_ratio">(crypto.simulator.cca_sim.CCASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cr_sim.CRSim.compute_success_ratio">(crypto.simulator.cr_sim.CRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ctxt_sim.CTXTSim.compute_success_ratio">(crypto.simulator.ctxt_sim.CTXTSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.kr_sim.KRSim.compute_success_ratio">(crypto.simulator.kr_sim.KRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.lr_sim.LRSim.compute_success_ratio">(crypto.simulator.lr_sim.LRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ufcma_sim.UFCMASim.compute_success_ratio">(crypto.simulator.ufcma_sim.UFCMASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.world_sim.WorldSim.compute_success_ratio">(crypto.simulator.world_sim.WorldSim method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.cr_sim.CRSim">CRSim (class in crypto.simulator.cr_sim)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.abstract.html#module-crypto.abstract">crypto.abstract (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games">crypto.games (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game">crypto.games.game (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_bind">crypto.games.game_bind (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_cca">crypto.games.game_cca (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_cr">crypto.games.game_cr (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_kr">crypto.games.game_kr (module)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_lr">crypto.games.game_lr (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_prf">crypto.games.game_prf (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#module-crypto.games.game_ufcma">crypto.games.game_ufcma (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.primitives.html#module-crypto.primitives">crypto.primitives (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator">crypto.simulator (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.base_sim">crypto.simulator.base_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#module-crypto.simulator.world_sim">crypto.simulator.world_sim (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.tools.html#module-crypto.tools">crypto.tools (module)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.ctxt_sim.CTXTSim">CTXTSim (class in crypto.simulator.ctxt_sim)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game_cca.GameCCA.dec">dec() (crypto.games.game_cca.GameCCA method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_int_ctxt.GameINTCTXT.dec">(crypto.games.game_int_ctxt.GameINTCTXT method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.block_cipher.BlockCipher.decrypt">decrypt() (crypto.abstract.block_cipher.BlockCipher method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.digital_signature.DigitalSignature">DigitalSignature (class in crypto.abstract.digital_signature)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.egcd">egcd() (in module crypto.tools)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_int_ctxt.GameINTCTXT.enc">enc() (crypto.games.game_int_ctxt.GameINTCTXT method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.block_cipher.BlockCipher.encrypt">encrypt() (crypto.abstract.block_cipher.BlockCipher method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game.Game.finalize">finalize() (crypto.games.game.Game method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_bind.GameBIND.finalize">(crypto.games.game_bind.GameBIND method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_cr.GameCR.finalize">(crypto.games.game_cr.GameCR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_int_ctxt.GameINTCTXT.finalize">(crypto.games.game_int_ctxt.GameINTCTXT method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_kr.GameKR.finalize">(crypto.games.game_kr.GameKR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_lr.GameLR.finalize">(crypto.games.game_lr.GameLR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_prf.GamePRF.finalize">(crypto.games.game_prf.GamePRF method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_ufcma.GameUFCMA.finalize">(crypto.games.game_ufcma.GameUFCMA method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game_kr.GameKR.fn">fn() (crypto.games.game_kr.GameKR method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_prf.GamePRF.fn">(crypto.games.game_prf.GamePRF method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game.Game">Game (class in crypto.games.game)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_bind.GameBIND">GameBIND (class in crypto.games.game_bind)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_cca.GameCCA">GameCCA (class in crypto.games.game_cca)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_cr.GameCR">GameCR (class in crypto.games.game_cr)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_int_ctxt.GameINTCTXT">GameINTCTXT (class in crypto.games.game_int_ctxt)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game_kr.GameKR">GameKR (class in crypto.games.game_kr)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_lr.GameLR">GameLR (class in crypto.games.game_lr)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_prf.GamePRF">GamePRF (class in crypto.games.game_prf)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.games.html#crypto.games.game_ufcma.GameUFCMA">GameUFCMA (class in crypto.games.game_ufcma)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.hash_function.HashFunction.hash">hash() (crypto.abstract.hash_function.HashFunction method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.hash_function.HashFunction">HashFunction (class in crypto.abstract.hash_function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game.Game.initialize">initialize() (crypto.games.game.Game method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_bind.GameBIND.initialize">(crypto.games.game_bind.GameBIND method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_cr.GameCR.initialize">(crypto.games.game_cr.GameCR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_int_ctxt.GameINTCTXT.initialize">(crypto.games.game_int_ctxt.GameINTCTXT method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_kr.GameKR.initialize">(crypto.games.game_kr.GameKR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_lr.GameLR.initialize">(crypto.games.game_lr.GameLR method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_prf.GamePRF.initialize">(crypto.games.game_prf.GamePRF method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_ufcma.GameUFCMA.initialize">(crypto.games.game_ufcma.GameUFCMA method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.int_to_string">int_to_string() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.join">join() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.digital_signature.DigitalSignature.key_gen">key_gen() (crypto.abstract.digital_signature.DigitalSignature method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.kr_sim.KRSim">KRSim (class in crypto.simulator.kr_sim)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.games.html#crypto.games.game_cca.GameCCA.lr">lr() (crypto.games.game_cca.GameCCA method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_lr.GameLR.lr">(crypto.games.game_lr.GameLR method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.lr_sim.LRSim">LRSim (class in crypto.simulator.lr_sim)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.message_authentication_code.MAC">MAC (class in crypto.abstract.message_authentication_code)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.modinv">modinv() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.primitives.html#crypto.primitives.random_string">random_string() (in module crypto.primitives)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.primitives.html#crypto.primitives.random_string_bits">random_string_bits() (in module crypto.primitives)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.primitives.html#crypto.primitives.rsa_keygen">rsa_keygen() (in module crypto.primitives)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.bind_sim.BINDSim.run">run() (crypto.simulator.bind_sim.BINDSim method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cca_sim.CCASim.run">(crypto.simulator.cca_sim.CCASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.cr_sim.CRSim.run">(crypto.simulator.cr_sim.CRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ctxt_sim.CTXTSim.run">(crypto.simulator.ctxt_sim.CTXTSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.kr_sim.KRSim.run">(crypto.simulator.kr_sim.KRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.lr_sim.LRSim.run">(crypto.simulator.lr_sim.LRSim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.ufcma_sim.UFCMASim.run">(crypto.simulator.ufcma_sim.UFCMASim method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.simulator.html#crypto.simulator.world_sim.WorldSim.run">(crypto.simulator.world_sim.WorldSim method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.digital_signature.DigitalSignature.sign">sign() (crypto.abstract.digital_signature.DigitalSignature method)</a>
+  </dt>
+
+      
+  <dt><a href="crypto.tools.html#crypto.tools.split">split() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.string_to_int">string_to_int() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.message_authentication_code.MAC.tag">tag() (crypto.abstract.message_authentication_code.MAC method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.games.html#crypto.games.game_ufcma.GameUFCMA.tag">(crypto.games.game_ufcma.GameUFCMA method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.ufcma_sim.UFCMASim">UFCMASim (class in crypto.simulator.ufcma_sim)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.abstract.html#crypto.abstract.digital_signature.DigitalSignature.verify">verify() (crypto.abstract.digital_signature.DigitalSignature method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="crypto.abstract.html#crypto.abstract.message_authentication_code.MAC.verify">(crypto.abstract.message_authentication_code.MAC method)</a>
+  </dt>
+
+        
+  <dt><a href="crypto.games.html#crypto.games.game_ufcma.GameUFCMA.verify">(crypto.games.game_ufcma.GameUFCMA method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.simulator.html#crypto.simulator.world_sim.WorldSim">WorldSim (class in crypto.simulator.world_sim)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="crypto.tools.html#crypto.tools.xor_strings">xor_strings() (in module crypto.tools)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Aviv Kiss, Derrick Smith.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

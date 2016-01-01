@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crypto.simulator package &mdash; CSE 207 Project 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/>
+        <link rel="next" title="crypto.abstract package" href="crypto.abstract.html"/>
+        <link rel="prev" title="crypto.games package" href="crypto.games.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> CSE 207 Project
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#why-did-we-create-this">Why did we create this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#deliverables">Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#editing-opening-assignments">Editing/Opening Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id2">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.games.html">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game">crypto.games.game module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_bind">crypto.games.game_bind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cca">crypto.games.game_cca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cr">crypto.games.game_cr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_kr">crypto.games.game_kr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_lr">crypto.games.game_lr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_prf">crypto.games.game_prf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_ufcma">crypto.games.game_ufcma module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.base_sim">crypto.simulator.base_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator.world_sim">crypto.simulator.world_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.simulator">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.primitives.html">Primitives</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CSE 207 Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>crypto.simulator package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/crypto.simulator.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="crypto-simulator-package">
+<h1>crypto.simulator package<a class="headerlink" href="#crypto-simulator-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crypto.simulator.base_sim">
+<span id="crypto-simulator-base-sim-module"></span><h2>crypto.simulator.base_sim module<a class="headerlink" href="#module-crypto.simulator.base_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.base_sim.BaseSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.base_sim.</code><code class="descname">BaseSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/base_sim.html#BaseSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.base_sim.BaseSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the base simulator class that all simulators inherit from. It has
+the base constructor which all simulators use.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.bind_sim">
+<span id="crypto-simulator-bind-sim-module"></span><h2>crypto.simulator.bind_sim module<a class="headerlink" href="#module-crypto.simulator.bind_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.bind_sim.BINDSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.bind_sim.</code><code class="descname">BINDSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/bind_sim.html#BINDSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.bind_sim.BINDSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameBIND. It simulates the
+game with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.bind_sim.BINDSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/bind_sim.html#BINDSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.bind_sim.BINDSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[Bind =&gt; true]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.bind_sim.BINDSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/bind_sim.html#BINDSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.bind_sim.BINDSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game 10 times and computes the ratio of successful runs
+over total runs. This is fewer runs than usual because RSA math is
+expensive/slow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.bind_sim.BINDSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/bind_sim.html#BINDSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.bind_sim.BINDSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game with the adversary provided to the constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.cca_sim">
+<span id="crypto-simulator-cca-sim-module"></span><h2>crypto.simulator.cca_sim module<a class="headerlink" href="#module-crypto.simulator.cca_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.cca_sim.CCASim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.cca_sim.</code><code class="descname">CCASim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cca_sim.html#CCASim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cca_sim.CCASim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameCCA. It simulates the
+game with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.cca_sim.CCASim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cca_sim.html#CCASim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cca_sim.CCASim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[Right =&gt; 1] - Pr[Left =&gt; 1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.cca_sim.CCASim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cca_sim.html#CCASim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cca_sim.CCASim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries game in world and computes the ratio of success / total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; Which world to compute for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.cca_sim.CCASim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cca_sim.html#CCASim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cca_sim.CCASim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game in a specific world.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; 1 or 0, for different worlds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.cr_sim">
+<span id="crypto-simulator-cr-sim-module"></span><h2>crypto.simulator.cr_sim module<a class="headerlink" href="#module-crypto.simulator.cr_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.cr_sim.CRSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.cr_sim.</code><code class="descname">CRSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cr_sim.html#CRSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cr_sim.CRSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.cr_sim.CRSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cr_sim.html#CRSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cr_sim.CRSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[CR(H,A)-&gt;true]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.cr_sim.CRSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cr_sim.html#CRSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cr_sim.CRSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game 1000 times and computes the ratio of successful runs
+over total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.cr_sim.CRSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/cr_sim.html#CRSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.cr_sim.CRSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game with the adversary provided to the constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.ctxt_sim">
+<span id="crypto-simulator-ctxt-sim-module"></span><h2>crypto.simulator.ctxt_sim module<a class="headerlink" href="#module-crypto.simulator.ctxt_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.ctxt_sim.CTXTSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.ctxt_sim.</code><code class="descname">CTXTSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ctxt_sim.html#CTXTSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ctxt_sim.CTXTSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameINTCTXT. It simulates the
+game with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.ctxt_sim.CTXTSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ctxt_sim.html#CTXTSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ctxt_sim.CTXTSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[UFCMA =&gt; True]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.ctxt_sim.CTXTSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ctxt_sim.html#CTXTSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ctxt_sim.CTXTSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game 1000 times and computes the ratio of successful runs
+over total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.ctxt_sim.CTXTSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ctxt_sim.html#CTXTSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ctxt_sim.CTXTSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game with the adversary provided to the constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.kr_sim">
+<span id="crypto-simulator-kr-sim-module"></span><h2>crypto.simulator.kr_sim module<a class="headerlink" href="#module-crypto.simulator.kr_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.kr_sim.KRSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.kr_sim.</code><code class="descname">KRSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/kr_sim.html#KRSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.kr_sim.KRSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameKR. It simulates the
+game with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.kr_sim.KRSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/kr_sim.html#KRSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.kr_sim.KRSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[KR =&gt; true]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.kr_sim.KRSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/kr_sim.html#KRSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.kr_sim.KRSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game 1000 times and computes the ratio of successful runs
+over total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.kr_sim.KRSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/kr_sim.html#KRSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.kr_sim.KRSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game with the adversary provided to the constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.lr_sim">
+<span id="crypto-simulator-lr-sim-module"></span><h2>crypto.simulator.lr_sim module<a class="headerlink" href="#module-crypto.simulator.lr_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.lr_sim.LRSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.lr_sim.</code><code class="descname">LRSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/lr_sim.html#LRSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.lr_sim.LRSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameLR. It simulates the game
+with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.lr_sim.LRSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/lr_sim.html#LRSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.lr_sim.LRSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[Right =&gt; 1] - Pr[Left =&gt; 1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.lr_sim.LRSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/lr_sim.html#LRSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.lr_sim.LRSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries game in world and computes the ratio of success / total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; Which world to compute for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.lr_sim.LRSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/lr_sim.html#LRSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.lr_sim.LRSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game in a specific world.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; 1 or 0, for different worlds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True for success and False for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.ufcma_sim">
+<span id="crypto-simulator-ufcma-sim-module"></span><h2>crypto.simulator.ufcma_sim module<a class="headerlink" href="#module-crypto.simulator.ufcma_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.ufcma_sim.UFCMASim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.ufcma_sim.</code><code class="descname">UFCMASim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ufcma_sim.html#UFCMASim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ufcma_sim.UFCMASim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GameUFCMA. It simulates the
+game with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.ufcma_sim.UFCMASim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ufcma_sim.html#UFCMASim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ufcma_sim.UFCMASim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[UFCMA =&gt; True]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.ufcma_sim.UFCMASim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ufcma_sim.html#UFCMASim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ufcma_sim.UFCMASim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game 1000 times and computes the ratio of successful runs
+over total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.ufcma_sim.UFCMASim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/ufcma_sim.html#UFCMASim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.ufcma_sim.UFCMASim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game with the adversary provided to the constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">1 for success and 0 for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator.world_sim">
+<span id="crypto-simulator-world-sim-module"></span><h2>crypto.simulator.world_sim module<a class="headerlink" href="#module-crypto.simulator.world_sim" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.simulator.world_sim.WorldSim">
+<em class="property">class </em><code class="descclassname">crypto.simulator.world_sim.</code><code class="descname">WorldSim</code><span class="sig-paren">(</span><em>game</em>, <em>adversary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/world_sim.html#WorldSim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.world_sim.WorldSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.simulator.base_sim.BaseSim" title="crypto.simulator.base_sim.BaseSim"><tt class="xref py py-class docutils literal">crypto.simulator.base_sim.BaseSim</tt></a></p>
+<p>This simulator was written to be used with GamePRF. It simulates the game
+with an Adversary and allows you to compute an approximate advantage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>game</strong> &#8211; This is the specific instantiation of the game you wish to
+perform a simulation of.</li>
+<li><strong>adversary</strong> &#8211; This is the adversary you would like to run against</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>the game.</p>
+<dl class="method">
+<dt id="crypto.simulator.world_sim.WorldSim.compute_advantage">
+<code class="descname">compute_advantage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/world_sim.html#WorldSim.compute_advantage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.world_sim.WorldSim.compute_advantage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adv = Pr[Real =&gt; 1] - Pr[Rand =&gt; 1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Approximate advantage computed using the above equation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.world_sim.WorldSim.compute_success_ratio">
+<code class="descname">compute_success_ratio</code><span class="sig-paren">(</span><em>world</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/world_sim.html#WorldSim.compute_success_ratio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.world_sim.WorldSim.compute_success_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries game in world and computes the ratio of success / total runs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; Which world to compute for.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">successes / total_runs</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.simulator.world_sim.WorldSim.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>world</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/simulator/world_sim.html#WorldSim.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.simulator.world_sim.WorldSim.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the game in a specific world.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; 1 or 0, for different worlds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">1 for success and 0 for failure.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.simulator">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-crypto.simulator" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="crypto.abstract.html" class="btn btn-neutral float-right" title="crypto.abstract package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crypto.games.html" class="btn btn-neutral" title="crypto.games package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Aviv Kiss, Derrick Smith.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

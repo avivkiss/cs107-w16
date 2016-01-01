@@ -1,0 +1,82 @@
+Intro
+*****
+
+.. NOTE :: All of the assignments provided are based completely off of the
+   homework and practice final from CSE 107 offered at the University of
+   California San Diego and taught by Professor Mihir Bellare in the 
+   Winter of 2015.
+
+
+What is this?
+=============
+This project is a Python package which can be used to develop assignments for 
+introductory cryptography courses. It also contains several example exercises
+which can be used as a guide to create new assignments. The hope is that this
+framework will make it easier for students to understand theoretical
+cryptography by transforming theoretical games into runnable code.
+
+Why did we create this? 
+=======================
+This project is motivated by students who struggle in introductory cryptography 
+courses. A central component of theoretical cryptography is the idea of a 
+"game". These games are formal settings, which resemble APIs, within which an 
+adversary can work towards achieving a particular goal. A good adversary has
+a "high" advantage. Students often have trouble understanding what these games 
+are and what the capabilities of their adversaries are. We postulate that this
+is due to a lack of understanding of the game model. It is often unclear to 
+students what these games are as well as what quantities are available to
+the adversary for exploitation. Further, once a student constructs an adversary
+there is no way to "test" the adversary to see if it is correct or not. 
+
+Goals
+=====
+We strive to provide both students and instructors a framework to create and
+test cryptographic schemes and assignments. Generally, instructors will
+create a set of assignments that students will complete and test. However,
+motivated students can gain a deeper understanding of cryptographic
+primitives and games by creating and testing their own assignments.
+
+Deliverables
+============
+In order to achieve our goals we deliver the following: 
+
+  1. :doc:`Conventions </conventions>` for defining cryptography games in Python
+     and simulating common pseudocode operations. 
+  2. A framework consisting of pre-built :doc:`games </crypto.games>` and
+     :doc:`simulators </crypto.simulator>` for which 
+     it is easy to create custom assignments by supplying custom schemes.
+     Furthermore, this framework makes it easy for students to verify the
+     accuracy of their adversaries using the simulation function. 
+  3. An :doc:`abstract cryptography </crypto.abstract>` library that simulates 
+     different primitives including block ciphers, signature schemes, 
+     hash functions, and MACs.
+     This will allow for the easy creation of assignments that use arbitrary 
+     key and message length (for example when using this method it is trivial
+     to demonstrate to students how larger sizes can be impractical to attack
+     while smaller sizes are quite easy to attack).
+  4. A user guide which will explain several things in the form of a Python
+     documentation site (this site): 
+
+    a. :doc:`Conventions </conventions>` we use when simulating pseudocode 
+       operations as well as the functions and libraries we built to make
+       this easy. 
+    b. The overall :doc:`architecture </design_and_architecture>` of our 
+       framework and the philosophy behind its design.
+    e. A series of templates (located in /templates) for quickly getting started
+       with one of the bundled games. 
+
+What's next?
+============
+There are a number of improvements we could make to this framework if we were 
+given more time. One area that could use significant improvements is error 
+handling. Currently when an error that is not a syntax error is encountered
+we return an ``None`` object, this is similar to returning null. Instead 
+using a set of descriptive exceptions would make assignment creation
+more understandable and straightforward. Further, we can expand the framework
+to cover even more games and assignment types. One compelling possibility that
+we have not yet explored is using Python notebooks which can provide an 
+interactive environment for assignment completion and tutorials.  
+
+We believe that this level of interactivity opens up possibilities and that we
+are only scratching the surface of the types of assignments we can come up with.
+It would be amazing to explore some of these and see what we could come up with. 

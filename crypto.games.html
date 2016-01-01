@@ -1,0 +1,920 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crypto.games package &mdash; CSE 207 Project 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/>
+        <link rel="next" title="crypto.simulator package" href="crypto.simulator.html"/>
+        <link rel="prev" title="Design and Architecture" href="design_and_architecture.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> CSE 207 Project
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#why-did-we-create-this">Why did we create this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#deliverables">Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#editing-opening-assignments">Editing/Opening Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id2">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game">crypto.games.game module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_bind">crypto.games.game_bind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_cca">crypto.games.game_cca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_cr">crypto.games.game_cr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_kr">crypto.games.game_kr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_lr">crypto.games.game_lr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_prf">crypto.games.game_prf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games.game_ufcma">crypto.games.game_ufcma module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.games">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.simulator.html">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.base_sim">crypto.simulator.base_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.world_sim">crypto.simulator.world_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.primitives.html">Primitives</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CSE 207 Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>crypto.games package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/crypto.games.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="crypto-games-package">
+<h1>crypto.games package<a class="headerlink" href="#crypto-games-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crypto.games.game">
+<span id="crypto-games-game-module"></span><h2>crypto.games.game module<a class="headerlink" href="#module-crypto.games.game" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game.Game">
+<em class="property">class </em><code class="descclassname">crypto.games.game.</code><code class="descname">Game</code><a class="reference internal" href="_modules/crypto/games/game.html#Game"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><tt class="xref py py-class docutils literal">object</tt></a></p>
+<p>This class is the superclass for all games. This doesn&#8217;t do anything
+functional, but it is meant to define the interfaces that are available to
+simulators. Here almost all initialize and finalize signatures are
+defined. This is to help define and enforce common behavior.</p>
+<p>In general Game objects are meant to be combined with simulator objects
+in order to test adversaries.</p>
+<dl class="method">
+<dt id="crypto.games.game.Game.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>m1=None</em>, <em>m2=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game.html#Game.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game.Game.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finalize method. As per convention in our framework this
+method always returns true when the adversary wins and is false
+otherwise.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>m1</strong> &#8211; Optional param 1 to finalize.</li>
+<li><strong>m2</strong> &#8211; Optional param 2 to finalize.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns anything from init that needs to go to the adversary.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game.Game.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><em>b=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game.html#Game.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game.Game.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up any internal state required by the game. This should be made
+such that calling initialize resets all internal state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>b</strong> &#8211; optional param to indicate world in some games.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_bind">
+<span id="crypto-games-game-bind-module"></span><h2>crypto.games.game_bind module<a class="headerlink" href="#module-crypto.games.game_bind" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_bind.GameBIND">
+<em class="property">class </em><code class="descclassname">crypto.games.game_bind.</code><code class="descname">GameBIND</code><span class="sig-paren">(</span><em>p</em>, <em>v</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_bind.html#GameBIND"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_bind.GameBIND" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game is used to test whether a candidate commitment scheme is binding.
+Adversaries playing this game do not have access to any oracles. However,
+they do have access to a public parameter pi.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>p</strong> &#8211; Algorithm used to generate pi. This must be a callable
+python function that generates a public parameter pi that
+can be used by the adversary and commit/verify functions.</li>
+<li><strong>v</strong> &#8211; Algorithm used to verify commitment. This must be a
+callable python function that takes a key, commitment,
+message and random factor as parameters as defined in
+the commitment scheme slides.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_bind.GameBIND.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>(c</em>, <em>m0</em>, <em>m1</em>, <em>k0</em>, <em>k1)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_bind.html#GameBIND.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_bind.GameBIND.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines whether the game was won or lost by checking it
+to see if the adversary was able to construct two (m, k) pairs with the
+same commitment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>c</strong> &#8211; Target commitment for (m, k) pairs.</li>
+<li><strong>m0</strong> &#8211; Message 1</li>
+<li><strong>m1</strong> &#8211; Message 2</li>
+<li><strong>k0</strong> &#8211; Verification parameter 1</li>
+<li><strong>k1</strong> &#8211; Verification parameter 2</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True on win, False otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_bind.GameBIND.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_bind.html#GameBIND.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_bind.GameBIND.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the public parameter pi using the parameter generation
+algorithm. Called by Simulator class automatically when a game is run.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_cca">
+<span id="crypto-games-game-cca-module"></span><h2>crypto.games.game_cca module<a class="headerlink" href="#module-crypto.games.game_cca" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_cca.GameCCA">
+<em class="property">class </em><code class="descclassname">crypto.games.game_cca.</code><code class="descname">GameCCA</code><span class="sig-paren">(</span><em>encrypt</em>, <em>decrypt</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cca.html#GameCCA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cca.GameCCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game_lr.GameLR" title="crypto.games.game_lr.GameLR"><tt class="xref py py-class docutils literal">crypto.games.game_lr.GameLR</tt></a></p>
+<p>This game is used to test whether or not encryption schemes are secure
+under a chosen cipher text attack. Adversaries playing this game have acces
+to an lr(l, r) and dec oracle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypt</strong> &#8211; This should be a function that takes a key and
+plaintext as parameters and returns a cipher text.
+It should take keys of <code class="docutils literal highlight highlight-python"><span class="n">key_len</span></code> as its key.</li>
+<li><strong>decrypt</strong> &#8211; This should be a function that takes a key and plain
+cipher text as parameters and returns the plain text
+message. It should accept a key of length <code class="docutils literal highlight highlight-python"><span class="n">key_len</span></code>
+for its key length.</li>
+<li><strong>key_len</strong> &#8211; Length of key in bytes used by <code class="docutils literal highlight highlight-python"><span class="n">encrypt</span></code> and
+<code class="docutils literal highlight highlight-python"><span class="n">decrypt</span></code>.</li>
+<li><strong>block_len</strong> &#8211; Length of block size in bytes used by <code class="docutils literal highlight highlight-python"><span class="n">encrypt</span></code> and
+<code class="docutils literal highlight highlight-python"><span class="n">decrypt</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_cca.GameCCA.dec">
+<code class="descname">dec</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cca.html#GameCCA.dec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cca.GameCCA.dec" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a decryption oracle. The adversary can query to decrypt any
+cipher text that it did not receive from the lr oracle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> &#8211; Cipher text to decrypt.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Decryption of cipher text if valid. None otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_cca.GameCCA.lr">
+<code class="descname">lr</code><span class="sig-paren">(</span><em>l</em>, <em>r</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cca.html#GameCCA.lr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cca.GameCCA.lr" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is an lr oracle. It returns the encryption of either the left or
+or right message that must be of equal length. A query for a
+particular pair is only allowed to be made once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong> &#8211; Left message.</li>
+<li><strong>r</strong> &#8211; Right message.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Encryption of left message in left world and right message in
+right world. If the messages are not of equal length then
+<code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_cr">
+<span id="crypto-games-game-cr-module"></span><h2>crypto.games.game_cr module<a class="headerlink" href="#module-crypto.games.game_cr" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_cr.GameCR">
+<em class="property">class </em><code class="descclassname">crypto.games.game_cr.</code><code class="descname">GameCR</code><span class="sig-paren">(</span><em>hash_f</em>, <em>key_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cr.html#GameCR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cr.GameCR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game is used to test the collision resistance of hash functions.
+Adversaries playing this game do not have access to any oracles however
+they do have access to the key used by the hash function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hash_f</strong> &#8211; This is the hash function that the adversary is
+playing against. It must take two parameters, a key
+of length key_len and a message.</li>
+<li><strong>key_len</strong> &#8211; Length of key used by hash function.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_cr.GameCR.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>(x1</em>, <em>x2)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cr.html#GameCR.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cr.GameCR.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by the simulator class to determine whether or not
+the adversary produced the correct output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x1</strong> &#8211; Suspect collision member 1.</li>
+<li><strong>x2</strong> &#8211; Suspect collision member 2.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if collision, false otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_cr.GameCR.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_cr.html#GameCR.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_cr.GameCR.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new key to be used by the hash function. Called by simulator
+class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">key to be used by hash function.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_int_ctxt">
+<span id="crypto-games-game-int-ctxt-module"></span><h2>crypto.games.game_int_ctxt module<a class="headerlink" href="#module-crypto.games.game_int_ctxt" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_int_ctxt.GameINTCTXT">
+<em class="property">class </em><code class="descclassname">crypto.games.game_int_ctxt.</code><code class="descname">GameINTCTXT</code><span class="sig-paren">(</span><em>encrypt</em>, <em>decrypt</em>, <em>key_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_int_ctxt.html#GameINTCTXT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_int_ctxt.GameINTCTXT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game tests the integrity of a cypher text. It is to be used to test
+to see if the decryption algorithm only decrypts authentic messages that
+have been sent by the sender. The Adversary has access to an encryption
+oracle (enc) and a decryption oracle (dec) that it uses to see if it won.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypt</strong> &#8211; Encryption function that takes inputs, a key k of
+key_len length and a message.</li>
+<li><strong>decrypt</strong> &#8211; Decryption function to match encryption function.</li>
+<li><strong>key_len</strong> &#8211; Length of key used by encrypt and decrypt.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_int_ctxt.GameINTCTXT.dec">
+<code class="descname">dec</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_int_ctxt.html#GameINTCTXT.dec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_int_ctxt.GameINTCTXT.dec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decryption oracle, you can only query for the same message once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>c</strong> &#8211; Cipher text to be decrypted.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if decrypted successfully, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_int_ctxt.GameINTCTXT.enc">
+<code class="descname">enc</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_int_ctxt.html#GameINTCTXT.enc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_int_ctxt.GameINTCTXT.enc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encryption oracle, you can only query for the same message once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> &#8211; Message to be encrypted.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Cipher text if valid, <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_int_ctxt.GameINTCTXT.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_int_ctxt.html#GameINTCTXT.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_int_ctxt.GameINTCTXT.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method called by simulator to determine if adversary won.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if win, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_int_ctxt.GameINTCTXT.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_int_ctxt.html#GameINTCTXT.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_int_ctxt.GameINTCTXT.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes key to be used in encryption. Called by simulator to
+reset game state in between runs.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_kr">
+<span id="crypto-games-game-kr-module"></span><h2>crypto.games.game_kr module<a class="headerlink" href="#module-crypto.games.game_kr" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_kr.GameKR">
+<em class="property">class </em><code class="descclassname">crypto.games.game_kr.</code><code class="descname">GameKR</code><span class="sig-paren">(</span><em>encrypt</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_kr.html#GameKR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_kr.GameKR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game tests encryption schemes against key recovery attacks.
+Adversaries have access to an fn oracle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypt</strong> &#8211; This must be a callable python function that takes two
+inputs, k and x where k is a key of length key_len and
+x is a message of length block_len.</li>
+<li><strong>key_len</strong> &#8211; Length of the key (in bytes) used in the function that
+will be tested with this game.</li>
+<li><strong>block_len</strong> &#8211; Length of the block (in bytes) used in the function
+that will be used in this game.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_kr.GameKR.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>key_guess</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_kr.html#GameKR.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_kr.GameKR.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the game was won or lost, i.e. if the key_guess is
+consistent with all the encryption queries the adversary made.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key_guess</strong> &#8211; key to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if the key is consistent, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_kr.GameKR.fn">
+<code class="descname">fn</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_kr.html#GameKR.fn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_kr.GameKR.fn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_kr.GameKR.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_kr.html#GameKR.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_kr.GameKR.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method initializes the game and generates a new key to be called
+by the corresponding simulator class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_lr">
+<span id="crypto-games-game-lr-module"></span><h2>crypto.games.game_lr module<a class="headerlink" href="#module-crypto.games.game_lr" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_lr.GameLR">
+<em class="property">class </em><code class="descclassname">crypto.games.game_lr.</code><code class="descname">GameLR</code><span class="sig-paren">(</span><em>encrypt</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game is used as a base game for games that need to determine between
+a left and right encryption. It is useful to determine how well a scheme
+is hiding its data from the adversary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypt</strong> &#8211; This must be a callable python function that takes two
+inputs, k and x where k is a key of length key_len and
+x is a message of length block_len.</li>
+<li><strong>key_len</strong> &#8211; Length of the key (in bytes) used in the function that
+will be tested with this game.</li>
+<li><strong>block_len</strong> &#8211; Length of the block (in bytes) used in the function
+that will be used in this game.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_lr.GameLR.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>guess</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called automatically by the WorldSim and evaluates a
+guess that is returned by the adversary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>guess</strong> &#8211; Which world the adversary thinks it is in, either a 0
+or 1.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if guess is correct, false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_lr.GameLR.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><em>b=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method initializes the game, generates a new key, and selects a
+random world if needed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>b</strong> &#8211; This is an optional parameter that allows the simulator
+to control which world the game is in. This allows for
+more exact simulation measurements.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_lr.GameLR.lr">
+<code class="descname">lr</code><span class="sig-paren">(</span><em>l</em>, <em>r</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR.lr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR.lr" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is an lr oracle. It returns the encryption of either the left or
+or right message. The encryption and message must be of equal length. A
+query for a particular pair is only allowed to be made once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong> &#8211; Left message.</li>
+<li><strong>r</strong> &#8211; Right message.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Encryption of left message in left world and right message in
+right world. If the messages are not of equal length then
+<code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_prf">
+<span id="crypto-games-game-prf-module"></span><h2>crypto.games.game_prf module<a class="headerlink" href="#module-crypto.games.game_prf" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_prf.GamePRF">
+<em class="property">class </em><code class="descclassname">crypto.games.game_prf.</code><code class="descname">GamePRF</code><span class="sig-paren">(</span><em>prf</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_prf.html#GamePRF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_prf.GamePRF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game is used to test whether a candidate function is a good
+pseudo-random function or not. Adversaries playing this game have
+access to an fn oracle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>prf</strong> &#8211; This must be a callable python function that takes two
+inputs, k and x where k is a key of length key_len and x is a
+message of length block_len.</li>
+<li><strong>key_len</strong> &#8211; Length of the key (in bytes) used in the function that
+will be tested with this game.</li>
+<li><strong>block_len</strong> &#8211; Length of the block (in bytes) used in the function
+that will be used in this game.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_prf.GamePRF.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>guess</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_prf.html#GamePRF.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_prf.GamePRF.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called automatically by the WorldSim and evaluates a
+guess that is returned by the adversary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>guess</strong> &#8211; Which world the adversary thinks it is in, either a 0
+or 1.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if guess is correct, false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_prf.GamePRF.fn">
+<code class="descname">fn</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_prf.html#GamePRF.fn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_prf.GamePRF.fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the fn oracle that is exposed to the adversary via the
+simulator. It takes in a message m of length self.block_len and
+returns either the encrypted result in the real world and the
+random result in the random world. 0 = random world, 1 = real world.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>m</strong> &#8211; Message adversary wants to encrypt.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Either the encrypted result in the real world or random result
+in the random world.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_prf.GamePRF.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><em>world=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_prf.html#GamePRF.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_prf.GamePRF.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the initialize method and is part of GamePRF as defined in the
+slides. It is called automatically by WorldSim when a game is run.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>world</strong> &#8211; This is an optional parameter that allows the simulator
+to control which world the game is in. This allows for
+more exact simulation measurements.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games.game_ufcma">
+<span id="crypto-games-game-ufcma-module"></span><h2>crypto.games.game_ufcma module<a class="headerlink" href="#module-crypto.games.game_ufcma" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.games.game_ufcma.GameUFCMA">
+<em class="property">class </em><code class="descclassname">crypto.games.game_ufcma.</code><code class="descname">GameUFCMA</code><span class="sig-paren">(</span><em>_tag</em>, <em>_verify</em>, <em>key_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_ufcma.html#GameUFCMA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_ufcma.GameUFCMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
+<p>This game is meant to test the security of message authentication schemes.
+Adversaries playing this game have access to a tag and verify oracle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>_tag</strong> &#8211; This must be a callable python function that returns
+message tags and takes in a key and message (key should
+be of length key_len).</li>
+<li><strong>_verify</strong> &#8211; This must be a callable python function that returns
+1 when a tag is valid and 0 when it is not. Its
+parameters should be key, message, and tag.</li>
+<li><strong>key_len</strong> &#8211; This is the length of the key used by the MAC in bytes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.games.game_ufcma.GameUFCMA.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_ufcma.html#GameUFCMA.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_ufcma.GameUFCMA.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is usually called automatically by the simulator class
+to determine whether or not the adversary won the game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if successful, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_ufcma.GameUFCMA.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_ufcma.html#GameUFCMA.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_ufcma.GameUFCMA.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the game and resets the state. Called every time you would
+like to play the game again, usually by the simulator class. Resets
+key and internal storage.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_ufcma.GameUFCMA.tag">
+<code class="descname">tag</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_ufcma.html#GameUFCMA.tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_ufcma.GameUFCMA.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the tag oracle that the adversary has access to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> &#8211; Message to be tagged.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Tag of <code class="docutils literal highlight highlight-python"><span class="n">message</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.games.game_ufcma.GameUFCMA.verify">
+<code class="descname">verify</code><span class="sig-paren">(</span><em>(message</em>, <em>tag)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_ufcma.html#GameUFCMA.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_ufcma.GameUFCMA.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the verify oracle. If the adversary is able to come up with
+even one forgery it wins.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; Message to check tag with.</li>
+<li><strong>tag</strong> &#8211; Tag to check.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">1 if the tag is valid 0 otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.games">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-crypto.games" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="crypto.simulator.html" class="btn btn-neutral float-right" title="crypto.simulator package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="design_and_architecture.html" class="btn btn-neutral" title="Design and Architecture" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Aviv Kiss, Derrick Smith.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

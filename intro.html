@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Intro &mdash; CSE 207 Project 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Getting Started" href="quick_start.html"/>
+        <link rel="prev" title="Welcome to 207project’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> CSE 207 Project
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-did-we-create-this">Why did we create this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deliverables">Deliverables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#editing-opening-assignments">Editing/Opening Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id2">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.games.html">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game">crypto.games.game module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_bind">crypto.games.game_bind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cca">crypto.games.game_cca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cr">crypto.games.game_cr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_kr">crypto.games.game_kr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_lr">crypto.games.game_lr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_prf">crypto.games.game_prf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_ufcma">crypto.games.game_ufcma module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.simulator.html">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.base_sim">crypto.simulator.base_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.world_sim">crypto.simulator.world_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.primitives.html">Primitives</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CSE 207 Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Intro</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/intro.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="intro">
+<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All of the assignments provided are based completely off of the
+homework and practice final from CSE 107 offered at the University of
+California San Diego and taught by Professor Mihir Bellare in the
+Winter of 2015.</p>
+</div>
+<div class="section" id="what-is-this">
+<h2>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
+<p>This project is a Python package which can be used to develop assignments for
+introductory cryptography courses. It also contains several example exercises
+which can be used as a guide to create new assignments. The hope is that this
+framework will make it easier for students to understand theoretical
+cryptography by transforming theoretical games into runnable code.</p>
+</div>
+<div class="section" id="why-did-we-create-this">
+<h2>Why did we create this?<a class="headerlink" href="#why-did-we-create-this" title="Permalink to this headline">¶</a></h2>
+<p>This project is motivated by students who struggle in introductory cryptography
+courses. A central component of theoretical cryptography is the idea of a
+&#8220;game&#8221;. These games are formal settings, which resemble APIs, within which an
+adversary can work towards achieving a particular goal. A good adversary has
+a &#8220;high&#8221; advantage. Students often have trouble understanding what these games
+are and what the capabilities of their adversaries are. We postulate that this
+is due to a lack of understanding of the game model. It is often unclear to
+students what these games are as well as what quantities are available to
+the adversary for exploitation. Further, once a student constructs an adversary
+there is no way to &#8220;test&#8221; the adversary to see if it is correct or not.</p>
+</div>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>We strive to provide both students and instructors a framework to create and
+test cryptographic schemes and assignments. Generally, instructors will
+create a set of assignments that students will complete and test. However,
+motivated students can gain a deeper understanding of cryptographic
+primitives and games by creating and testing their own assignments.</p>
+</div>
+<div class="section" id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
+<p>In order to achieve our goals we deliver the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><a class="reference internal" href="conventions.html"><em>Conventions</em></a> for defining cryptography games in Python
+and simulating common pseudocode operations.</li>
+<li>A framework consisting of pre-built <a class="reference internal" href="crypto.games.html"><em>games</em></a> and
+<a class="reference internal" href="crypto.simulator.html"><em>simulators</em></a> for which
+it is easy to create custom assignments by supplying custom schemes.
+Furthermore, this framework makes it easy for students to verify the
+accuracy of their adversaries using the simulation function.</li>
+<li>An <a class="reference internal" href="crypto.abstract.html"><em>abstract cryptography</em></a> library that simulates
+different primitives including block ciphers, signature schemes,
+hash functions, and MACs.
+This will allow for the easy creation of assignments that use arbitrary
+key and message length (for example when using this method it is trivial
+to demonstrate to students how larger sizes can be impractical to attack
+while smaller sizes are quite easy to attack).</li>
+<li>A user guide which will explain several things in the form of a Python
+documentation site (this site):</li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><a class="reference internal" href="conventions.html"><em>Conventions</em></a> we use when simulating pseudocode
+operations as well as the functions and libraries we built to make
+this easy.</li>
+<li>The overall <a class="reference internal" href="design_and_architecture.html"><em>architecture</em></a> of our
+framework and the philosophy behind its design.</li>
+</ol>
+<ol class="loweralpha simple" start="5">
+<li>A series of templates (located in /templates) for quickly getting started
+with one of the bundled games.</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="what-s-next">
+<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of improvements we could make to this framework if we were
+given more time. One area that could use significant improvements is error
+handling. Currently when an error that is not a syntax error is encountered
+we return an <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> object, this is similar to returning null. Instead
+using a set of descriptive exceptions would make assignment creation
+more understandable and straightforward. Further, we can expand the framework
+to cover even more games and assignment types. One compelling possibility that
+we have not yet explored is using Python notebooks which can provide an
+interactive environment for assignment completion and tutorials.</p>
+<p>We believe that this level of interactivity opens up possibilities and that we
+are only scratching the surface of the types of assignments we can come up with.
+It would be amazing to explore some of these and see what we could come up with.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to 207project’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Aviv Kiss, Derrick Smith.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

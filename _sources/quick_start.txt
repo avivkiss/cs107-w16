@@ -1,0 +1,112 @@
+Getting Started
+***************
+
+Introduction
+============
+This section contains information on how to download the project from a
+public Dropbox page. It also includes links to the downloads pages of
+python and pycharm. Finally, it contains common commands that are used while
+creating and running assignments.
+
+Download and install project Module
+===================================
+Download the module from `Dropbox <https://goo.gl/F3rQnL>`_  as a zip. Once the
+download is complete unzip the contents to the location of your choosing.
+
+Opening a project
+=================
+.. NOTE:: Pycharm must be installed on your computer before attempting to
+   open a project in it.
+   Click `here <https://www.jetbrains.com/pycharm/download/>`_ to
+   download and install pycharm.
+
+Pycharm allows you to open an existing project. To do this, navigate to the
+top left corner and select File->open.
+
+
+.. image :: ../source/images/OpenProject1.png
+
+This will open a pop up window that you should use to navigate to the directory
+that the project you wish to open is located in.
+
+
+.. image :: ../source/images/OpenProject2.png
+   :width: 80%
+
+Run a sample assignment
+=======================
+.. WARNING:: Python must be installed on your computer in order to continue.
+   Click `here <https://www.python.org/downloads/>`_ to install python.
+
+
+From the terminal
+-----------------
+To run a sample assignment navigate to the cse207 directory and enter the
+following command::
+   python -m assignments.<assignment>
+
+Do not add the .py at the end of the assignment name. Also note, this will
+only work for Mac and Linux machines. Below is an example of how to run the
+ind_cpa assignment::
+
+    ~/Documents/cse207 $ python -m assignments.<assignment>
+
+    The advantage of your adversary is ~0.481
+    Your Decryption function is correct
+
+From  Pycharm
+-------------
+After successfully downloading and opening the project, navigate to the
+assignment that you wish to run. To do this, there is a directory tree on the
+left hand side of the pycharm environment. Drill down into the assignments
+directory and right click the assignment you wish to run.
+
+.. image :: ../source/images/directoryTree.png
+
+A menu will appear with a list of options. Click on "run <assignment>" to
+run an assignment or "Debug <assignment> to run the assignment in debugging
+mode.
+
+.. image :: ../source/images/runAssignment.png
+
+On the bottom panel a modified terminal will appear that will display
+the output from the last assignment you ran. It is important to remember to
+follow the above procedure every time you wish to run a different game.
+
+Editing/Opening Assignments
+===========================
+
+From the terminal
+-----------------
+This is very similar to running an assignment, but instead of using the
+python command replace it with the editor of your choice. Example opening
+an assignment with vim::
+
+    vim <assignment>
+
+From pycharm
+------------
+As with running assignments in pycharm, you must first navigate to the right
+directory in the document tree located in the left panel. Once you
+locate the document you wish to edit, double click it. This will switch the
+focus of the main panel to the source code of the document you are editing.
+
+Creating Blank Assignments
+==========================
+From the terminal
+-----------------
+From the assignments directory, you can  create a new assignment with the
+same command you use to edit an assignment. Here is an example using vim::
+
+    vim <new assignment>
+
+From pycharm
+------------
+Navigate to the correct directory from the directory tree in the left panel.
+Right click on the assignments folder -> new.
+
+.. image :: ../source/images/newAssignment1.png
+
+Select Python file, enter an assignment name, and click enter.
+
+.. image :: ../source/images/newAssignment2.png

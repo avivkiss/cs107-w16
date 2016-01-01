@@ -1,0 +1,55 @@
+Design and Architecture
+***********************
+
+Before you dive deeper into the Framework, we'd like to explain some of our 
+thinking behind its design and how the different pieces work together.
+
+Games
+=====
+In formal cryptography there is this idea of a "game". A game is a way to think
+about cryptographic schemes in a formal setting. Generally games have a way to 
+start and end and indicate a win or lose finishing state. You challenge games
+using Adversaries which have a goal of finishing the game in the winning state.
+Games also frequently expose "oracles" which are functions that the Adversary
+can query to simulate knowledge an Adversary might obtain in the real world. 
+
+In order to approximate these games we have built a Python class for each game 
+type. The classes mirror the behavior and formal definition of their 
+corresponding formal games as closely as possible. However, there are some
+things that the formal games do not have to worry about that we do. For
+example, the constructors for our games typically take length parameters for
+key or block generation that might be needed by the game. This peculiarity
+and much more is documented extensively in the class documentation for the
+games which can be found :doc:`here </crypto.games>`.
+
+Simulators
+==========
+Because our games mirror their theoretical counterparts they do not include 
+the ability to run themselves. As such we have created the notion of a 
+simulator for a game. Each of our game classes have corresponding simulator
+classes which can be used to "run" a game. In general simulator constructors
+take a game and an adversary as parameters. From there you can perform any 
+number of runs of that adversary, all games are built to clean up state between
+runs, and thus to run a game again you just call the ``run`` method on the 
+simulator. Furthermore, all simulators have a method that can approximate the
+advantage that the adversary, which is passed in as a parameter, has against
+that particular instance of the game (this is the ``compute_advantage``
+method). For more information about simulators see the
+:doc:`documentation for the simulator classes </crypto.simulator>`.
+
+For examples of how simulators and games interact please see the 
+:doc:`assignment creation section </how_to_instructors>` or the sample 
+assignments and templates folder. 
+
+Abstract Cryptography Library 
+=============================
+In addition to creating game and simulator classes we have also created an 
+additional set of tools that instructors can use to create assignments. These
+tools allow instructors to simulate ideal versions of several cryptographic
+primitives. We call this set of tools our "Abstract Cryptography Library". 
+Currently we include classes which simulate 
+:mod:`block ciphers <crypto.abstract.block_cipher>`,
+:mod:`hash functions <crypto.abstract.hash_function>`,
+:mod:`message authentication codes <crypto.abstract.message_authentication_code>`, and 
+:mod:`digital signature schemes <crypto.abstract.digital_signature>`.
+
