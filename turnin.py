@@ -2,15 +2,12 @@
 
 import json, urlparse, os, argparse, requests, glob
 
-SERVER_URL = "http://127.0.0.1:5000"
+SERVER_URL = "http://dev.avivkiss.com"
 
 def path_leaf(path):
   return path.strip('/').strip('\\').split('/')[-1].split('\\')[-1]
 
 def check_submission(problem_set, student_id):
-  # My API (2)
-  # GET http://127.0.0.1:5000/did_submit/A10940122/2
-
   try:
     response = requests.get(
       url= urlparse.urljoin(SERVER_URL, "/did_submit/%s/%s" % (student_id, problem_set)),
