@@ -10,9 +10,10 @@ creating and running assignments.
 
 Download Exercises 
 ==================
-To download the exercises clone our repository with a `--recursive` flag: 
+To download the exercises clone our repository with a --recursive flag::
 
     git clone --recursive git@github.com:avivkiss/cs107-w16.git
+
 
 Opening a project in Pycharm
 ============================
@@ -42,7 +43,7 @@ Run a sample assignment
 
 From the terminal
 -----------------
-To run a sample assignment navigate to the cse207 directory and enter the
+To run a sample assignment navigate to the cs107-w16 directory and enter the
 following command::
    python -m assignments.<assignment>
 
