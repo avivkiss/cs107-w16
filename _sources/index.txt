@@ -1,4 +1,4 @@
-.. 207project documentation master file, created by
+.. 107project documentation master file, created by
    sphinx-quickstart on Wed May 27 19:32:26 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.

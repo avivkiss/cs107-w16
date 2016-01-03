@@ -79,7 +79,7 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-exercises">Download Exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#run-a-sample-assignment">Run a sample assignment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#from-the-terminal">From the terminal</a></li>
@@ -102,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#assignments">Assignments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
 </ul>
 </li>
@@ -190,10 +191,11 @@ public Dropbox page. It also includes links to the downloads pages of
 python and pycharm. Finally, it contains common commands that are used while
 creating and running assignments.</p>
 </div>
-<div class="section" id="download-and-install-project-module">
-<h2>Download and install project Module<a class="headerlink" href="#download-and-install-project-module" title="Permalink to this headline">¶</a></h2>
-<p>Download the module from <a class="reference external" href="https://goo.gl/F3rQnL">Dropbox</a>  as a zip. Once the
-download is complete unzip the contents to the location of your choosing.</p>
+<div class="section" id="download-exercises">
+<h2>Download Exercises<a class="headerlink" href="#download-exercises" title="Permalink to this headline">¶</a></h2>
+<p>To download the exercises clone our repository with a <cite>&#8211;recursive</cite> flag:</p>
+<blockquote>
+<div>git clone &#8211;recursive <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:avivkiss/cs107-w16.git</div></blockquote>
 </div>
 <div class="section" id="opening-a-project-in-pycharm">
 <h2>Opening a project in Pycharm<a class="headerlink" href="#opening-a-project-in-pycharm" title="Permalink to this headline">¶</a></h2>
@@ -228,7 +230,7 @@ following command:</p>
 <p>Do not add the .py at the end of the assignment name. Also note, this will
 only work for Mac and Linux machines. Below is an example of how to run the
 ind_cpa assignment:</p>
-<div class="highlight-python"><div class="highlight"><pre>~/Documents/cse207 $ python -m assignments.&lt;assignment&gt;
+<div class="highlight-python"><div class="highlight"><pre>~/Documents/cs107-w16 $ python -m assignments.&lt;assignment&gt;
 
 The advantage of your adversary is ~0.481
 Your Decryption function is correct
