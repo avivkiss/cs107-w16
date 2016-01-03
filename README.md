@@ -17,7 +17,7 @@ you wish to turn in. Before your first submission you may need to install the
 
 ## More Documentation
 
-You can find additional documentation at the [projects site](https://avivkiss.github.io/cs107-w16/index.html).
+You can find additional documentation at the [project site](https://avivkiss.github.io/cs107-w16/index.html).
 
 ## Assigned Homework (Coming soon)
 
