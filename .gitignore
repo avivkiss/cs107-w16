@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+sample_assignment/test.pdf
+
+sample_assignment/test.py
