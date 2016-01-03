@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Design and Architecture &mdash; CSE 207 Project 0.1 documentation</title>
+  <title>Design and Architecture &mdash; CSE 107 Exercises 0.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/>
+    <link rel="top" title="CSE 107 Exercises 0.1 documentation" href="index.html"/>
         <link rel="next" title="crypto.games package" href="crypto.games.html"/>
         <link rel="prev" title="Conventions" href="conventions.html"/> 
 
@@ -49,7 +49,7 @@
         
 
         
-          <a href="index.html" class="icon icon-home"> CSE 207 Project
+          <a href="index.html" class="icon icon-home"> CSE 107 Exercises
         
 
         
@@ -74,16 +74,13 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#why-did-we-create-this">Why did we create this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#goals">Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#deliverables">Deliverables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#what-s-next">What&#8217;s next?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#getting-around">Getting Around</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
@@ -105,6 +102,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Design and Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#games">Games</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignments">Assignments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#abstract-cryptography-library">Abstract Cryptography Library</a></li>
 </ul>
 </li>
@@ -160,7 +158,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">CSE 207 Project</a>
+        <a href="index.html">CSE 107 Exercises</a>
       </nav>
 
 
@@ -222,6 +220,26 @@ method). For more information about simulators see the
 <p>For examples of how simulators and games interact please see the
 <tt class="xref doc docutils literal">assignment creation section</tt> or the sample
 assignments and templates folder.</p>
+</div>
+<div class="section" id="assignments">
+<h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<p>To complete an assignment, you must fill in all of the required functions.
+For most assignments that means only filling in the adversary, but some
+assignments have more than one function to implement.</p>
+<p>Here is what the layout of most assignments look like:</p>
+<ul class="simple">
+<li>Imports</li>
+<li>Problem statement and definitions</li>
+<li>Your Adversary</li>
+<li>Boiler plate main/tester</li>
+</ul>
+<p>Pay special attention the the problem statement and adversary. The adversary
+will usually contain in-line documentation of the adversary&#8217;s parameters and
+expected return.</p>
+<p>You can use the <a class="reference internal" href="conventions.html"><em>conventions page</em></a>  as a reference for how
+to do common pseudo-code operations in Python. Also be sure to check out
+<a class="reference internal" href="crypto.tools.html"><em>crypto.tools</em></a> and
+<a class="reference internal" href="crypto.primitives.html"><em>crypto.primitives</em></a>.</p>
 </div>
 <div class="section" id="abstract-cryptography-library">
 <h2>Abstract Cryptography Library<a class="headerlink" href="#abstract-cryptography-library" title="Permalink to this headline">¶</a></h2>

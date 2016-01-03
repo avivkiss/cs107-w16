@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Intro &mdash; CSE 207 Project 0.1 documentation</title>
+  <title>Intro &mdash; CSE 107 Exercises 0.1 documentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
 
   
-    <link rel="top" title="CSE 207 Project 0.1 documentation" href="index.html"/>
+    <link rel="top" title="CSE 107 Exercises 0.1 documentation" href="index.html"/>
         <link rel="next" title="Getting Started" href="quick_start.html"/>
-        <link rel="prev" title="Welcome to 207project’s documentation!" href="index.html"/> 
+        <link rel="prev" title="Welcome to CSE 107 Exercise’s documentation!" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +49,7 @@
         
 
         
-          <a href="index.html" class="icon icon-home"> CSE 207 Project
+          <a href="index.html" class="icon icon-home"> CSE 107 Exercises
         
 
         
@@ -74,16 +74,13 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Intro</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-this">What is this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-did-we-create-this">Why did we create this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#deliverables">Deliverables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-s-next">What&#8217;s next?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-around">Getting Around</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
@@ -105,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#assignments">Assignments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
 </ul>
 </li>
@@ -160,7 +158,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">CSE 207 Project</a>
+        <a href="index.html">CSE 107 Exercises</a>
       </nav>
 
 
@@ -186,93 +184,50 @@
             
   <div class="section" id="intro">
 <h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">All of the assignments provided are based completely off of the
-homework and practice final from CSE 107 offered at the University of
-California San Diego and taught by Professor Mihir Bellare in the
-Winter of 2015.</p>
-</div>
 <div class="section" id="what-is-this">
 <h2>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
-<p>This project is a Python package which can be used to develop assignments for
-introductory cryptography courses. It also contains several example exercises
-which can be used as a guide to create new assignments. The hope is that this
-framework will make it easier for students to understand theoretical
-cryptography by transforming theoretical games into runnable code.</p>
-</div>
-<div class="section" id="why-did-we-create-this">
-<h2>Why did we create this?<a class="headerlink" href="#why-did-we-create-this" title="Permalink to this headline">¶</a></h2>
-<p>This project is motivated by students who struggle in introductory cryptography
-courses. A central component of theoretical cryptography is the idea of a
-&#8220;game&#8221;. These games are formal settings, which resemble APIs, within which an
+<p>This is the documentation for the framework that is used to implement your
+assignments. The hope is that this framework will make it easier for you
+to understand theoretical cryptography by transforming theoretical games into
+runnable code. The documentation contains useful information for solving your
+assignments and helps bridge the gap between theoretical pseudocode and runnable
+code. If this is your first time using Python you can find many guides on the
+internet, I found <a class="reference external" href="http://python4java.necaiseweb.org">this guide</a> extremely helpful
+when I was new to the language.</p>
+<p>A central component of theoretical cryptography is the idea of a &#8220;game&#8221;.
+These games are formal settings, which resemble APIs, within which an
 adversary can work towards achieving a particular goal. A good adversary has
-a &#8220;high&#8221; advantage. Students often have trouble understanding what these games
-are and what the capabilities of their adversaries are. We postulate that this
-is due to a lack of understanding of the game model. It is often unclear to
-students what these games are as well as what quantities are available to
-the adversary for exploitation. Further, once a student constructs an adversary
-there is no way to &#8220;test&#8221; the adversary to see if it is correct or not.</p>
+a &#8220;high&#8221; advantage. This framework makes the capabilities of the adversaries easier to understand by documenting them as actual APIs. This makes more clear
+what these games are as well as what quantities are available to the adversary
+for exploitation. Further, once you construct an adversary you can use this
+framework to test whether it is correct or not.</p>
 </div>
-<div class="section" id="goals">
-<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
-<p>We strive to provide both students and instructors a framework to create and
-test cryptographic schemes and assignments. Generally, instructors will
-create a set of assignments that students will complete and test. However,
-motivated students can gain a deeper understanding of cryptographic
-primitives and games by creating and testing their own assignments.</p>
-</div>
-<div class="section" id="deliverables">
-<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
-<p>In order to achieve our goals we deliver the following:</p>
+<div class="section" id="getting-around">
+<h2>Getting Around<a class="headerlink" href="#getting-around" title="Permalink to this headline">¶</a></h2>
+<p>Here is a brief overview of what you can expect from each section of the
+documentation:</p>
 <blockquote>
 <div><ol class="arabic simple">
+<li><a class="reference internal" href="quick_start.html"><em>Getting Started</em></a> has everything you need to get
+started, how to download, edit and run your code, either in the terminal
+or in an IDE (Pycharm).</li>
 <li><a class="reference internal" href="conventions.html"><em>Conventions</em></a> for defining cryptography games in Python
 and simulating common pseudocode operations.</li>
-<li>A framework consisting of pre-built <a class="reference internal" href="crypto.games.html"><em>games</em></a> and
-<a class="reference internal" href="crypto.simulator.html"><em>simulators</em></a> for which
-it is easy to create custom assignments by supplying custom schemes.
-Furthermore, this framework makes it easy for students to verify the
-accuracy of their adversaries using the simulation function.</li>
-<li>An <a class="reference internal" href="crypto.abstract.html"><em>abstract cryptography</em></a> library that simulates
-different primitives including block ciphers, signature schemes,
-hash functions, and MACs.
-This will allow for the easy creation of assignments that use arbitrary
-key and message length (for example when using this method it is trivial
-to demonstrate to students how larger sizes can be impractical to attack
-while smaller sizes are quite easy to attack).</li>
-<li>A user guide which will explain several things in the form of a Python
-documentation site (this site):</li>
-</ol>
-<blockquote>
-<div><ol class="loweralpha simple">
-<li><a class="reference internal" href="conventions.html"><em>Conventions</em></a> we use when simulating pseudocode
-operations as well as the functions and libraries we built to make
-this easy.</li>
-<li>The overall <a class="reference internal" href="design_and_architecture.html"><em>architecture</em></a> of our
-framework and the philosophy behind its design.</li>
-</ol>
-<ol class="loweralpha simple" start="5">
-<li>A series of templates (located in /templates) for quickly getting started
-with one of the bundled games.</li>
+<li><a class="reference internal" href="design_and_architecture.html"><em>Design and Architecture</em></a> details the big
+picture overview of the framework. It introduces and explains the concept
+of a simulator in the context of games.</li>
+<li>The <a class="reference internal" href="crypto.games.html"><em>Games</em></a> and <a class="reference internal" href="crypto.simulator.html"><em>Simultaor</em></a>
+section contain documentation for all the simulator and game classes you
+will see in this course. While you can find a lot of information in the
+documentation there is no replacement for reading the code.</li>
+<li>The <a class="reference internal" href="crypto.abstract.html"><em>abstract cryptography</em></a> section covers the
+library that is used to simulate different primitives including block ciphers, signature schemes, hash functions, and MACs.</li>
 </ol>
 </div></blockquote>
-</div></blockquote>
-</div>
-<div class="section" id="what-s-next">
-<h2>What&#8217;s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
-<p>There are a number of improvements we could make to this framework if we were
-given more time. One area that could use significant improvements is error
-handling. Currently when an error that is not a syntax error is encountered
-we return an <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> object, this is similar to returning null. Instead
-using a set of descriptive exceptions would make assignment creation
-more understandable and straightforward. Further, we can expand the framework
-to cover even more games and assignment types. One compelling possibility that
-we have not yet explored is using Python notebooks which can provide an
-interactive environment for assignment completion and tutorials.</p>
-<p>We believe that this level of interactivity opens up possibilities and that we
-are only scratching the surface of the types of assignments we can come up with.
-It would be amazing to explore some of these and see what we could come up with.</p>
+<p>Hopefully you will find the provided documentation to be useful and answer any
+question you might have about applying Python in this context or the framework.
+This is our first quarter using this framework, as such please do not hesitate
+to ask questions on <a class="reference external" href="https://piazza.com/ucsd/winter2016/cse107/home">Piazza</a> or over <a class="reference external" href="mailto:avivkiss&#37;&#52;&#48;gmail&#46;com">email</a>.</p>
 </div>
 </div>
 
@@ -285,7 +240,7 @@ It would be amazing to explore some of these and see what we could come up with.
         <a href="quick_start.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to 207project’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Welcome to CSE 107 Exercise’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

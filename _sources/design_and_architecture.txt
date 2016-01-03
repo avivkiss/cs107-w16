@@ -41,6 +41,28 @@ For examples of how simulators and games interact please see the
 :doc:`assignment creation section </how_to_instructors>` or the sample 
 assignments and templates folder. 
 
+Assignments
+===========
+To complete an assignment, you must fill in all of the required functions.
+For most assignments that means only filling in the adversary, but some
+assignments have more than one function to implement. 
+
+Here is what the layout of most assignments look like: 
+
+- Imports 
+- Problem statement and definitions
+- Your Adversary 
+- Boiler plate main/tester
+
+Pay special attention the the problem statement and adversary. The adversary 
+will usually contain in-line documentation of the adversary's parameters and 
+expected return.
+
+You can use the :doc:`conventions page </conventions>`  as a reference for how 
+to do common pseudo-code operations in Python. Also be sure to check out 
+:doc:`crypto.tools </crypto.tools>` and 
+:doc:`crypto.primitives </crypto.primitives>`.
+
 Abstract Cryptography Library 
 =============================
 In addition to creating game and simulator classes we have also created an 

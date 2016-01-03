@@ -13,8 +13,8 @@ Download and install project Module
 Download the module from `Dropbox <https://goo.gl/F3rQnL>`_  as a zip. Once the
 download is complete unzip the contents to the location of your choosing.
 
-Opening a project
-=================
+Opening a project in Pycharm
+============================
 .. NOTE:: Pycharm must be installed on your computer before attempting to
    open a project in it.
    Click `here <https://www.jetbrains.com/pycharm/download/>`_ to
