@@ -19,6 +19,6 @@ you wish to turn in. Before your first submission you may need to install the
 
 You can find additional documentation at the [project site](https://avivkiss.github.io/cs107-w16/index.html).
 
-## Assigned Homework (Coming soon)
+## Assigned Homework 
 
-Starting week 2 this page will also contain a list of assignments and due dates to be completed. 
+- Classical Encryption (Due 1/19)
