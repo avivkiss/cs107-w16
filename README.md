@@ -4,7 +4,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 ## Getting Started
 To get started clone this repository with a `--recursive` flag: 
 
-    git clone --recursive git@github.com:avivkiss/cs107-w16.git
+    git clone --recursive https://github.com/avivkiss/cs107-w16.git
 
 ## Turning in Homework
 Before submitting please fill in the `student_info.json` file with your
