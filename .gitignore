@@ -59,3 +59,15 @@ target/
 sample_assignment/test.pdf
 
 sample_assignment/test.py
+
+.idea/workspace.xml
+
+.idea/.name
+
+.idea/modules.xml
+
+.idea/misc.xml
+
+.idea/vcs.xml
+
+.idea/w16_assignments.iml
