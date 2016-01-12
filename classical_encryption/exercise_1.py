@@ -12,7 +12,7 @@ MOD = 8
 
 def E(pi, m):
     """
-    :param pi: A random permutation of range(10).
+    :param pi: A random permutation of range(8).
     :param m: A string of integers of length 4.
     :return: ciphertext as string.
     """
@@ -34,7 +34,7 @@ def D(pi, c):
     """
     You must fill in this function.
 
-    :param pi: A random permuation of range(10)
+    :param pi: A random permuation of range(8)
     :param c: ciphertext as string
     :return: the correct decryption of c (i.e. m)
     """
