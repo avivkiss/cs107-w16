@@ -21,4 +21,4 @@ You can find additional documentation at the [project site](https://avivkiss.git
 
 ## Assigned Homework 
 
-- Classical Encryption (Due 1/19)
+- Classical Encryption (Due 1/19 11:59 AM)
