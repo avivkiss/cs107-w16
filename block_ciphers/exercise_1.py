@@ -28,11 +28,11 @@ block_len, key_len = 16, 16
 
 def E(k, m):
     """
-    You must fill in this function, this is your blockcipher that must have the
-    above properties.
+    You must fill in this function, this is your block cipher that must have
+    the above properties.
 
-    :param k: This is the key for the blockcipher.
-    :param m: Message for the blockcipher.
+    :param k: This is the key for the block cipher.
+    :param m: Message for the block cipher.
     :return: Ciphertext.
     """
 
