@@ -18,6 +18,8 @@ def check_submission(problem_set, student_id):
 
   except requests.exceptions.RequestException:
     print('HTTP Request to check submission status failed')
+  except Exception:
+    print("Unexpected error from turnin.")
 
     return False
 
@@ -39,6 +41,8 @@ def submit(problem_set, student_id, turnin):
     return response.content
   except requests.exceptions.RequestException:
     return 'HTTP Request failed'
+  except Exception:
+    return "Unexpected error from turnin request."
 
 
 student = json.load(open("student_info.json", 'r'))
