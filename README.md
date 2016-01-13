@@ -11,6 +11,11 @@ To get started clone this repository with a `--recursive` flag:
 
     git clone --recursive https://github.com/avivkiss/cs107-w16.git
 
+## Downloading Updates
+First commit your changes locally and then 
+
+    git pull --rebase; git submodule update --init
+
 ## Turning in Homework
 Before submitting please fill in the `student_info.json` file with your
 information, this is how you will be identified for grading.
