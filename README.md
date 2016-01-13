@@ -1,6 +1,11 @@
 # cs107-w16
 Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 
+## Assigned Homework 
+
+- Classical Encryption (Due 1/19 11:59 AM)
+- Block Ciphers (Due 1/21 at 11:59 AM)
+
 ## Getting Started
 To get started clone this repository with a `--recursive` flag: 
 
@@ -31,8 +36,3 @@ This will install requests in a local environment. Now, to turn in:
 ## More Documentation
 
 You can find additional documentation at the [project site](https://avivkiss.github.io/cs107-w16/index.html).
-
-## Assigned Homework 
-
-- Classical Encryption (Due 1/19 11:59 AM)
-- Block Ciphers (Due 1/21 at 11:59 AM)
