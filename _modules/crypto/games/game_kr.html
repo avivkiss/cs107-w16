@@ -183,7 +183,8 @@
 
 <div class="viewcode-block" id="GameKR"><a class="viewcode-back" href="../../../crypto.games.html#crypto.games.game_kr.GameKR">[docs]</a><span class="k">class</span> <span class="nc">GameKR</span><span class="p">(</span><span class="n">Game</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This game tests encryption schemes against key recovery attacks.</span>
+<span class="sd">    This game tests encryption schemes against key recovery attacks. In order to</span>
+<span class="sd">    win in this instantiation of KR you must make at least one oracle query.</span>
 <span class="sd">    Adversaries have access to an fn oracle.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encrypt</span><span class="p">,</span> <span class="n">key_len</span><span class="p">,</span> <span class="n">block_len</span><span class="p">):</span>
@@ -229,6 +230,9 @@
 <span class="sd">        :param key_guess: key to check</span>
 <span class="sd">        :return: True if the key is consistent, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+
         <span class="n">win</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">count</span><span class="p">):</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key_guess</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">messages</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cyphers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
