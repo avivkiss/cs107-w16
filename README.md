@@ -34,5 +34,5 @@ You can find additional documentation at the [project site](https://avivkiss.git
 
 ## Assigned Homework 
 
-- Classical Encryption (Due 1/19)
-- Block Ciphers (Due 1/21 at 12pm)
+- Classical Encryption (Due 1/19 11:59 AM)
+- Block Ciphers (Due 1/21 at 11:59 AM)
