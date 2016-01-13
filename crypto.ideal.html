@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crypto.ideal package &mdash; CSE 107 Exercises 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CSE 107 Exercises 0.1 documentation" href="index.html"/>
+        <link rel="next" title="crypto.tools module" href="crypto.tools.html"/>
+        <link rel="prev" title="crypto.simulator package" href="crypto.simulator.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> CSE 107 Exercises
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#getting-around">Getting Around</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-exercises">Download Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#editing-opening-assignments">Editing/Opening Assignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id2">From the terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#assignments">Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#ideal-cryptography-library">Ideal Cryptography Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.games.html">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game">crypto.games.game module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_bind">crypto.games.game_bind module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cca">crypto.games.game_cca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_cr">crypto.games.game_cr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_int_ctxt">crypto.games.game_int_ctxt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_kr">crypto.games.game_kr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_lr">crypto.games.game_lr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_prf">crypto.games.game_prf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games.game_ufcma">crypto.games.game_ufcma module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.games.html#module-crypto.games">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.simulator.html">Simulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.base_sim">crypto.simulator.base_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.bind_sim">crypto.simulator.bind_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cca_sim">crypto.simulator.cca_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.cr_sim">crypto.simulator.cr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ctxt_sim">crypto.simulator.ctxt_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.kr_sim">crypto.simulator.kr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.lr_sim">crypto.simulator.lr_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.ufcma_sim">crypto.simulator.ufcma_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator.world_sim">crypto.simulator.world_sim module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Ideal Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.ideal.block_cipher">crypto.ideal.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.ideal.digital_signature">crypto.ideal.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.ideal.hash_function">crypto.ideal.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.ideal.message_authentication_code">crypto.ideal.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crypto.ideal">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.primitives.html">Primitives</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CSE 107 Exercises</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>crypto.ideal package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/crypto.ideal.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="crypto-ideal-package">
+<h1>crypto.ideal package<a class="headerlink" href="#crypto-ideal-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crypto.ideal.block_cipher">
+<span id="crypto-ideal-block-cipher-module"></span><h2>crypto.ideal.block_cipher module<a class="headerlink" href="#module-crypto.ideal.block_cipher" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.ideal.block_cipher.BlockCipher">
+<em class="property">class </em><code class="descclassname">crypto.ideal.block_cipher.</code><code class="descname">BlockCipher</code><span class="sig-paren">(</span><em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/block_cipher.html#BlockCipher"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.block_cipher.BlockCipher" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class simulates a block cipher. It can emulate a block cipher
+with any key or message size (in bytes).</p>
+<p>Example Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">crypto.primitives</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">crypto.ideal.block_cipher</span> <span class="kn">import</span> <span class="n">BlockCipher</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">BlockCipher</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">random_string</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">cipher_text</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="n">decrypted_message</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">cipher_text</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">decrypted_message</span>
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>Hello World!
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key_len</strong> &#8211; Key length for block cipher in bytes.</li>
+<li><strong>block_len</strong> &#8211; Block length for block cipher in bytes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.ideal.block_cipher.BlockCipher.decrypt">
+<code class="descname">decrypt</code><span class="sig-paren">(</span><em>key</em>, <em>cipher</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/block_cipher.html#BlockCipher.decrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.block_cipher.BlockCipher.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated decryption function. Use of the correct key and
+cipher text will result in correct decryption. The cipher and key must
+have correct lengths.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; Key to use for simulated decryption, this must be of length,
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+<li><strong>cipher</strong> &#8211; Cipher text to be decrypted, this must be of length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">block_len</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The correct message for the cipher text, cipher, or</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> if parameters are not met.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.ideal.block_cipher.BlockCipher.encrypt">
+<code class="descname">encrypt</code><span class="sig-paren">(</span><em>key</em>, <em>block</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/block_cipher.html#BlockCipher.encrypt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.block_cipher.BlockCipher.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated encryption function. Simply use a key and message
+with the proper block length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> &#8211; Key to use for simulated encryption, so this must be of</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>length</dt>
+<dd><code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> &#8211; Message to be encrypted, so this must be of length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">block_len</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The cipher text for the block or <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> if the length
+parameters are not met.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.ideal.digital_signature">
+<span id="crypto-ideal-digital-signature-module"></span><h2>crypto.ideal.digital_signature module<a class="headerlink" href="#module-crypto.ideal.digital_signature" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.ideal.digital_signature.DigitalSignature">
+<em class="property">class </em><code class="descclassname">crypto.ideal.digital_signature.</code><code class="descname">DigitalSignature</code><span class="sig-paren">(</span><em>key_len</em>, <em>tag_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/digital_signature.html#DigitalSignature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.digital_signature.DigitalSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class simulates a digital signature scheme. It can simulate a signature
+scheme with any key or tag length (in bytes).</p>
+<p>Example Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">crypto.ideal.digital_signature</span> <span class="kn">import</span> <span class="n">DigitalSignature</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="s">&quot;ABCDEFGH&quot;</span> <span class="o">*</span> <span class="mi">16</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="o">*</span> <span class="mi">128</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">DigitalSignature</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+
+<span class="n">pk</span><span class="p">,</span> <span class="n">sk</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">key_gen</span><span class="p">()</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">sk</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>True
+False
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key_len</strong> &#8211; Key length for the DS in bytes.</li>
+<li><strong>tag_len</strong> &#8211; Tag length for the DS in bytes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.ideal.digital_signature.DigitalSignature.key_gen">
+<code class="descname">key_gen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/digital_signature.html#DigitalSignature.key_gen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.digital_signature.DigitalSignature.key_gen" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns a random key for a DS scheme.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.ideal.digital_signature.DigitalSignature.sign">
+<code class="descname">sign</code><span class="sig-paren">(</span><em>sk</em>, <em>message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/digital_signature.html#DigitalSignature.sign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.digital_signature.DigitalSignature.sign" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated sign function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sk</strong> &#8211; Key for signing, you must use a key of length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+<li><strong>message</strong> &#8211; Message that will be signed, must have length greater
+than 0.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Signature of message if parameters are met, <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.ideal.digital_signature.DigitalSignature.verify">
+<code class="descname">verify</code><span class="sig-paren">(</span><em>pk</em>, <em>message</em>, <em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/digital_signature.html#DigitalSignature.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.digital_signature.DigitalSignature.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated verification function. Checks to see if the tag
+belongs to the passed in message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pk</strong> &#8211; Key to use for simulated verification. It must have length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+<li><strong>message</strong> &#8211; Message to check against tag.</li>
+<li><strong>tag</strong> &#8211; Tag that is being tested to see if it belongs to message.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the tag is correct, false otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.ideal.hash_function">
+<span id="crypto-ideal-hash-function-module"></span><h2>crypto.ideal.hash_function module<a class="headerlink" href="#module-crypto.ideal.hash_function" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.ideal.hash_function.HashFunction">
+<em class="property">class </em><code class="descclassname">crypto.ideal.hash_function.</code><code class="descname">HashFunction</code><span class="sig-paren">(</span><em>out_len</em>, <em>key_len=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/hash_function.html#HashFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.hash_function.HashFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class simulates a hash function. It can emulate a hash function with
+or without a key and with any key or output length (in bytes).</p>
+<p>Example Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">crypto.ideal.hash_function</span> <span class="kn">import</span> <span class="n">HashFunction</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="n">HashFunction</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="n">h1</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s">&quot;H3110 W0r1d!&quot;</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">h1</span> <span class="o">!=</span> <span class="n">h2</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span> <span class="o">==</span> <span class="n">h</span><span class="o">.</span><span class="n">out_len</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">h2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>True
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>out_len</strong> &#8211; Output length for the hash function in bytes.</li>
+<li><strong>key_len</strong> &#8211; Key length for the hash function in bytes, defaults
+to 0.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.ideal.hash_function.HashFunction.hash">
+<code class="descname">hash</code><span class="sig-paren">(</span><em>message</em>, <em>key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/hash_function.html#HashFunction.hash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.hash_function.HashFunction.hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated hashing function. If a key is used then it must have
+the correct key length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; Must be a string of length &gt; 0</li>
+<li><strong>key</strong> &#8211; Key used for simulated hashing, must have length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Hash of message if all parameters are met, <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.ideal.message_authentication_code">
+<span id="crypto-ideal-message-authentication-code-module"></span><h2>crypto.ideal.message_authentication_code module<a class="headerlink" href="#module-crypto.ideal.message_authentication_code" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="crypto.ideal.message_authentication_code.MAC">
+<em class="property">class </em><code class="descclassname">crypto.ideal.message_authentication_code.</code><code class="descname">MAC</code><span class="sig-paren">(</span><em>key_len</em>, <em>tag_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/message_authentication_code.html#MAC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.message_authentication_code.MAC" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class simulates a message authentication code scheme. It can simulate
+a MAC with any key or tag length (in bytes).</p>
+<p>Example Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">crypto.ideal.message_authentication_code</span> <span class="kn">import</span> <span class="n">MAC</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="s">&quot;ABCDEFGH&quot;</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span> <span class="o">*</span> <span class="mi">16</span>
+
+<span class="n">mac</span> <span class="o">=</span> <span class="n">MAC</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">mac</span><span class="o">.</span><span class="n">tag</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">mac</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">mac</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>True
+False
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key_len</strong> &#8211; Key length for the MAC in bytes.</li>
+<li><strong>tag_len</strong> &#8211; Tag length for the MAC in bytes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crypto.ideal.message_authentication_code.MAC.tag">
+<code class="descname">tag</code><span class="sig-paren">(</span><em>key</em>, <em>message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/message_authentication_code.html#MAC.tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.message_authentication_code.MAC.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated tagging function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; Key for tagging. You must use a key of length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+<li><strong>message</strong> &#8211; Message that will be tagged. It must have length greater
+than 0.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Tag of message if parameters are met, <code class="docutils literal highlight highlight-python"><span class="bp">None</span></code> otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="crypto.ideal.message_authentication_code.MAC.verify">
+<code class="descname">verify</code><span class="sig-paren">(</span><em>key</em>, <em>message</em>, <em>tag</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/ideal/message_authentication_code.html#MAC.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.ideal.message_authentication_code.MAC.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a simulated verification function. Checks to see if the tag
+belongs to the passed in message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> &#8211; Key to use for simulated verification. It must have length
+<code class="docutils literal highlight highlight-python"><span class="bp">self</span><span class="o">.</span><span class="n">key_len</span></code>.</li>
+<li><strong>message</strong> &#8211; Message to check against tag.</li>
+<li><strong>tag</strong> &#8211; Tag that is being tested to see if it belongs to message.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the tag is correct, false otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.ideal">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-crypto.ideal" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="crypto.tools.html" class="btn btn-neutral float-right" title="crypto.tools module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crypto.simulator.html" class="btn btn-neutral" title="crypto.simulator package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Aviv Kiss, Derrick Smith.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
