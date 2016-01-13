@@ -63,15 +63,15 @@ to do common pseudo-code operations in Python. Also be sure to check out
 :doc:`crypto.tools </crypto.tools>` and 
 :doc:`crypto.primitives </crypto.primitives>`.
 
-Abstract Cryptography Library 
-=============================
+Ideal Cryptography Library
+==========================
 In addition to creating game and simulator classes we have also created an 
 additional set of tools that instructors can use to create assignments. These
 tools allow instructors to simulate ideal versions of several cryptographic
-primitives. We call this set of tools our "Abstract Cryptography Library". 
+primitives. We call this set of tools our "Ideal Cryptography Library".
 Currently we include classes which simulate 
-:mod:`block ciphers <crypto.abstract.block_cipher>`,
-:mod:`hash functions <crypto.abstract.hash_function>`,
-:mod:`message authentication codes <crypto.abstract.message_authentication_code>`, and 
-:mod:`digital signature schemes <crypto.abstract.digital_signature>`.
+:mod:`block ciphers <crypto.ideal.block_cipher>`,
+:mod:`hash functions <crypto.ideal.hash_function>`,
+:mod:`message authentication codes <crypto.ideal.message_authentication_code>`, and
+:mod:`digital signature schemes <crypto.ideal.digital_signature>`.
 

@@ -22,7 +22,7 @@ Contents:
    design_and_architecture
    Games <crypto.games>
    Simulator <crypto.simulator>
-   Abstract <crypto.abstract>
+   Ideal Functions <crypto.ideal>
    Tools <crypto.tools>
    Primitives <crypto.primitives>
 

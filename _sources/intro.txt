@@ -37,7 +37,7 @@ documentation:
      section contain documentation for all the simulator and game classes you 
      will see in this course. While you can find a lot of information in the 
      documentation there is no replacement for reading the code. 
-  5. The :doc:`abstract cryptography </crypto.abstract>` section covers the   
+  5. The :doc:`ideal cryptography </crypto.ideal>` section covers the
      library that is used to simulate different primitives including block ciphers, signature schemes, hash functions, and MACs.
 
 Hopefully you will find the provided documentation to be useful and answer any

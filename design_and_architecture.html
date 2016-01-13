@@ -79,7 +79,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-exercises">Download Exercises</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
@@ -91,11 +91,6 @@
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
@@ -103,7 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#games">Games</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#simulators">Simulators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#assignments">Assignments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ideal-cryptography-library">Ideal Cryptography Library</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="crypto.games.html">Games</a><ul>
@@ -134,13 +129,13 @@
 <li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.ideal.html">Ideal Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#crypto-ideal-block-cipher-module">crypto.ideal.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#crypto-ideal-digital-signature-module">crypto.ideal.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#crypto-ideal-hash-function-module">crypto.ideal.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.message_authentication_code">crypto.ideal.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
@@ -241,17 +236,17 @@ to do common pseudo-code operations in Python. Also be sure to check out
 <a class="reference internal" href="crypto.tools.html"><em>crypto.tools</em></a> and
 <a class="reference internal" href="crypto.primitives.html"><em>crypto.primitives</em></a>.</p>
 </div>
-<div class="section" id="abstract-cryptography-library">
-<h2>Abstract Cryptography Library<a class="headerlink" href="#abstract-cryptography-library" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ideal-cryptography-library">
+<h2>Ideal Cryptography Library<a class="headerlink" href="#ideal-cryptography-library" title="Permalink to this headline">¶</a></h2>
 <p>In addition to creating game and simulator classes we have also created an
 additional set of tools that instructors can use to create assignments. These
 tools allow instructors to simulate ideal versions of several cryptographic
-primitives. We call this set of tools our &#8220;Abstract Cryptography Library&#8221;.
+primitives. We call this set of tools our &#8220;Ideal Cryptography Library&#8221;.
 Currently we include classes which simulate
-<a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher" title="crypto.abstract.block_cipher"><tt class="xref py py-mod docutils literal">block ciphers</tt></a>,
-<a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function" title="crypto.abstract.hash_function"><tt class="xref py py-mod docutils literal">hash functions</tt></a>,
-<a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code" title="crypto.abstract.message_authentication_code"><tt class="xref py py-mod docutils literal">message authentication codes</tt></a>, and
-<a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature" title="crypto.abstract.digital_signature"><tt class="xref py py-mod docutils literal">digital signature schemes</tt></a>.</p>
+<tt class="xref py py-mod docutils literal">block ciphers</tt>,
+<tt class="xref py py-mod docutils literal">hash functions</tt>,
+<a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.message_authentication_code" title="crypto.ideal.message_authentication_code"><tt class="xref py py-mod docutils literal">message authentication codes</tt></a>, and
+<tt class="xref py py-mod docutils literal">digital signature schemes</tt>.</p>
 </div>
 </div>
 
