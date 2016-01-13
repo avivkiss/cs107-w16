@@ -1,6 +1,6 @@
 from crypto.primitives import *
 from crypto.tools import *
-from crypto.abstract.block_cipher import *
+from crypto.ideal.block_cipher import *
 import sys, itertools
 
 """
