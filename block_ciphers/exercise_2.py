@@ -13,9 +13,9 @@ Sizes in comments are bits, sizes in code are in bytes (bits * 8).
 """
 
 # Block & key size in bytes.
-block, key_len = 2, 2
+block_len, key_len = 2, 2
 
-E = BlockCipher(key_len/2, block/2)
+E = BlockCipher(key_len/2, block_len/2)
  
 def F(k, x):
     """
@@ -80,13 +80,13 @@ from crypto.games.game_kr import GameKR
 from crypto.simulator.kr_sim import KRSim
 
 if __name__ == '__main__':
-    g = GameKR(F, key_len, block)
+    g = GameKR(F, key_len, block_len)
     s = KRSim(g, A)
 
     key = random_string(key_len)
 
     for j in range(100):
-        message = random_string(block)
+        message = random_string(block_len)
         cypher = F(key, message)
         if message != F_I(key, cypher):
             print "Your Decryption function is incorrect."
