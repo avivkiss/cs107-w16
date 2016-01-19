@@ -31,7 +31,7 @@ replacing "assignment_name" with the folder name of the assignment you wish to t
 ### Turnin from a lab machine
 If you need to turnin from the lab machines you can use [virtual environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/). Do the following in your project directory (you only need this command the first time): 
 
-    virtualenv env; source venv/bin/activate; pip install requests; deactivate
+    virtualenv env; source env/bin/activate; pip install requests; deactivate
 
 This will install requests in a local environment. Now, to turn in: 
 
