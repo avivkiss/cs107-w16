@@ -35,7 +35,7 @@ If you need to turnin from the lab machines you can use [virtual environments](h
 
 This will install requests in a local environment. Now, to turn in: 
 
-    source venv/bin/activate; ./turnin.py assignment_folder; deactivate 
+    source env/bin/activate; ./turnin.py assignment_folder; deactivate 
 
 
 ## More Documentation
