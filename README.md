@@ -4,7 +4,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 ## Assigned Homework 
 
 - Classical Encryption (Due 1/19 11:59 AM)
-- Block Ciphers (Due 1/21 at 11:59 AM)
+- Block Ciphers (Due **1/26** at 11:59 AM)
 
 ## Getting Started
 To get started clone this repository with a `--recursive` flag: 
