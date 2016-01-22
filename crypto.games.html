@@ -74,16 +74,13 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-this">What is this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#why-did-we-create-this">Why did we create this?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#goals">Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#deliverables">Deliverables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#what-s-next">What&#8217;s next?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#getting-around">Getting Around</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-and-install-project-module">Download and install project Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project">Opening a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#download-exercises">Download Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start.html#opening-a-project-in-pycharm">Opening a project in Pycharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#run-a-sample-assignment">Run a sample assignment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-the-terminal">From the terminal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#from-pycharm">From  Pycharm</a></li>
@@ -94,18 +91,14 @@
 <li class="toctree-l3"><a class="reference internal" href="quick_start.html#id3">From pycharm</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="quick_start.html#creating-blank-assignments">Creating Blank Assignments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id4">From the terminal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quick_start.html#id5">From pycharm</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design_and_architecture.html">Design and Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#games">Games</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#simulators">Simulators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#abstract-cryptography-library">Abstract Cryptography Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#assignments">Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_and_architecture.html#ideal-cryptography-library">Ideal Cryptography Library</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Games</a><ul>
@@ -136,13 +129,13 @@
 <li class="toctree-l2"><a class="reference internal" href="crypto.simulator.html#module-crypto.simulator">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="crypto.abstract.html">Abstract</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.block_cipher">crypto.abstract.block_cipher module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.digital_signature">crypto.abstract.digital_signature module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.hash_function">crypto.abstract.hash_function module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract.message_authentication_code">crypto.abstract.message_authentication_code module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.abstract.html#module-crypto.abstract">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypto.ideal.html">Ideal Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.block_cipher">crypto.ideal.block_cipher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.digital_signature">crypto.ideal.digital_signature module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.hash_function">crypto.ideal.hash_function module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal.message_authentication_code">crypto.ideal.message_authentication_code module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.ideal.html#module-crypto.ideal">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="crypto.tools.html">Tools</a></li>
@@ -530,7 +523,8 @@ reset game state in between runs.</p>
 <dt id="crypto.games.game_kr.GameKR">
 <em class="property">class </em><code class="descclassname">crypto.games.game_kr.</code><code class="descname">GameKR</code><span class="sig-paren">(</span><em>encrypt</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_kr.html#GameKR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_kr.GameKR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
-<p>This game tests encryption schemes against key recovery attacks.
+<p>This game tests encryption schemes against key recovery attacks. In order to
+win in this instantiation of KR you must make at least one oracle query.
 Adversaries have access to an fn oracle.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -585,7 +579,7 @@ by the corresponding simulator class.</p>
 <span id="crypto-games-game-lr-module"></span><h2>crypto.games.game_lr module<a class="headerlink" href="#module-crypto.games.game_lr" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="crypto.games.game_lr.GameLR">
-<em class="property">class </em><code class="descclassname">crypto.games.game_lr.</code><code class="descname">GameLR</code><span class="sig-paren">(</span><em>encrypt</em>, <em>key_len</em>, <em>block_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">crypto.games.game_lr.</code><code class="descname">GameLR</code><span class="sig-paren">(</span><em>encrypt</em>, <em>key_len</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/crypto/games/game_lr.html#GameLR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#crypto.games.game_lr.GameLR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#crypto.games.game.Game" title="crypto.games.game.Game"><tt class="xref py py-class docutils literal">crypto.games.game.Game</tt></a></p>
 <p>This game is used as a base game for games that need to determine between
 a left and right encryption. It is useful to determine how well a scheme
@@ -597,11 +591,9 @@ is hiding its data from the adversary.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>encrypt</strong> &#8211; This must be a callable python function that takes two
 inputs, k and x where k is a key of length key_len and
-x is a message of length block_len.</li>
+x is a message.</li>
 <li><strong>key_len</strong> &#8211; Length of the key (in bytes) used in the function that
 will be tested with this game.</li>
-<li><strong>block_len</strong> &#8211; Length of the block (in bytes) used in the function
-that will be used in this game.</li>
 </ul>
 </td>
 </tr>

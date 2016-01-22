@@ -189,19 +189,17 @@
 <span class="sd">    a left and right encryption. It is useful to determine how well a scheme</span>
 <span class="sd">    is hiding its data from the adversary.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encrypt</span><span class="p">,</span> <span class="n">key_len</span><span class="p">,</span> <span class="n">block_len</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encrypt</span><span class="p">,</span> <span class="n">key_len</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param encrypt: This must be a callable python function that takes two</span>
 <span class="sd">                        inputs, k and x where k is a key of length key_len and</span>
-<span class="sd">                        x is a message of length block_len.</span>
+<span class="sd">                        x is a message.</span>
 <span class="sd">        :param key_len: Length of the key (in bytes) used in the function that</span>
 <span class="sd">                        will be tested with this game.</span>
 
-<span class="sd">        :param block_len: Length of the block (in bytes) used in the function</span>
-<span class="sd">                          that will be used in this game.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">GameLR</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">encrypt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">key_len</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_len</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">,</span> <span class="n">key_len</span><span class="p">,</span> <span class="n">block_len</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">encrypt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">key_len</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">,</span> <span class="n">key_len</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 

@@ -6,7 +6,7 @@ Introduction
 This section contains information on how to download the project from GitHub. It also includes links to the downloads pages of python and pycharm. Finally, it contains common commands that are used while
 creating and running assignments.
 
-Download Exercises 
+Download Exercises
 ==================
 To download the exercises clone our repository with a --recursive flag::
 
@@ -38,13 +38,13 @@ From the terminal
 -----------------
 To run a sample assignment navigate to the cs107-w16 directory and enter the
 following command::
-   python -m assignments.<assignment>
+   python -m assignment_folder.exercise
 
 Do not add the .py at the end of the assignment name. Also note, this will
 only work for Mac and Linux machines. Below is an example of how to run the
 ind_cpa assignment::
 
-    ~/Documents/cs107-w16 $ python -m assignments.<assignment>
+    ~/Documents/cs107-w16 $ python -m assignment_folder.exercise
 
     The advantage of your adversary is ~0.481
     Your Decryption function is correct
