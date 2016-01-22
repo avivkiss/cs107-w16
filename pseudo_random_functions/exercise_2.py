@@ -13,8 +13,8 @@ K <- {0, 1}^k and input x <- {0, 1}^2l:
 """
 
 # Block & key size in bytes.
-block_len = 16
-key_len = 16
+block_len = 16 #  == l above
+key_len = 16   #  == k above
 
 g = HashFunction(block_len, key_len).hash
 
