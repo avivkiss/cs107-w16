@@ -8,7 +8,7 @@ from mock_se import SymmetricEncryption
 Let se represent any symmetric encryption scheme for which encryption is
 deterministic. Show that se is not IND-CPA secure by giving an efficient
 adversary A that achieves an adv(IND-CPA, se, A) = 1. Assume that the message
-space is {0, 1}* (represented by a Python string of arbitrary characters).
+space is {0, 1}* (represented by a Python string of arbitrary bytes (\x00-\xFF)).
 """
 
 key_len = 16
