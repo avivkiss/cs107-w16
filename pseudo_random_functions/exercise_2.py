@@ -1,6 +1,5 @@
-from crypto.primitives import AES, AES_I, random_string
 from crypto.tools import split, xor_strings
-from crypto.ideal.hash_function import HashFunction
+from crypto.ideal.block_cipher import BlockCipher
 
 """
 Note: Based on exercise in slide 31, PRF lecture.
@@ -16,7 +15,8 @@ K <- {0, 1}^k and input x <- {0, 1}^2l:
 block_len = 16 #  == l above
 key_len = 16   #  == k above
 
-g = HashFunction(block_len, key_len).hash
+# Using only the encrypt method from BlockCipher as a stand in for g
+g = BlockCipher(block_len, key_len).encrypt
 
 def G(r):
     def _G(k, x):
