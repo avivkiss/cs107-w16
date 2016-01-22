@@ -3,7 +3,7 @@ from collections import defaultdict
 """
 Let Z_8 = {0, 1, ...7}. Consider the symmetric encryption scheme in which
 a message m = m[0]m[1]m[2]m[3] is a four-digit string containing only numbers 
-0-8, a permutation of Z_8 is randomly selected as a key pi, and the ciphertext
+0-7, a permutation of Z_8 is randomly selected as a key pi, and the ciphertext
 c = c[0]c[1]c[2]c[3] = E(pi, m), also a four digit string from digits 0-7 is
 computed as follows:
 """

@@ -59,7 +59,7 @@ def F_I(k, c):
 """
 3. [50 points] Give a 4-query key-recovery attack in the form of an adversary A
 specified in code, achieving Adv(kr, F, A) = 1 and having running time
-O(2^(16) * T_{E}) (T_{E} is the running time of the encryption function E),
+O(2^(8) * T_{E}) (T_{E} is the running time of the encryption function E),
 where the big-oh hides some small constant.
 """
 
