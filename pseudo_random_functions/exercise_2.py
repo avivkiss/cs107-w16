@@ -7,7 +7,7 @@ Note: Based on exercise in slide 31, PRF lecture.
 
 Let g: {0, 1}^k x {0, 1}^l --> {0, 1}^l be a family of functions (it is
 arbitrary, but given, meaning known to the adversary) and let r>= 1 be an
-integer. The r-round Feistel cipher associated to G is the famult of functions
+integer. The r-round Feistel cipher associated to G is the family of functions
 G(r): {0, 1}^k x {0, 1}^2l --> {0, 1}^2l, defined as follows for any key
 K <- {0, 1}^k and input x <- {0, 1}^2l:
 """
