@@ -51,8 +51,8 @@ def A(lr):
 
     :param lr: This is the oracle supplied by GameLR, you can call this
     oracle to get an encryption of the data you pass into it.
-    :return: return 1 to indicate your adversary believes it is the left world
-    and return 0 to indicate that your adversary believes it is in the right
+    :return: return 1 to indicate your adversary believes it is the right world
+    and return 0 to indicate that your adversary believes it is in the left
     world.
     """
 
