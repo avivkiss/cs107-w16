@@ -5,7 +5,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 
 - Classical Encryption (Due 1/19 11:59 AM)
 - Block Ciphers (Due **1/26** at 11:59 AM)
-- Pseudo-random Functions (Tentatively Due 1/28 at 11:59 AM)
+- Pseudo-random Functions (Due **1/28** at 11:59 PM)
     - exercise_1.py is optional
 - Symmetric Encryption (TBA)
 
