@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import json, urlparse, os, argparse, requests, glob
+import json, urlparse, os, argparse, requests, glob, tarfile
 
 SERVER_URL = "http://dev.avivkiss.com"
 
@@ -74,6 +74,13 @@ turnin.extend(glob.glob(os.path.join(problem_set, '*.txt')))
 turnin.extend(glob.glob(os.path.join(problem_set, '*.py')))
 turnin.append('student_info.json')
 
+tar = tarfile.open(os.path.join(problem_set, problem_set+".tar"), 'w')
+
+for name in turnin:
+  tar.add(name)
+
+tar.close()
+
 # send assignment files and student info with problem set arg name
 
-print submit(problem_set, student_id, turnin)
+print submit(problem_set, student_id, [os.path.join(problem_set, problem_set+".tar")])
