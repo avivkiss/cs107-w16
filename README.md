@@ -8,6 +8,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 - Pseudo-random Functions (Due **1/28** at 11:59 PM)
     - exercise_1.py is optional
 - Symmetric Encryption  (Due **2/2** at 11:59 AM)
+    - exercise_1.py is optional
 
 ## Getting Started
 To get started clone this repository with a `--recursive` flag:
