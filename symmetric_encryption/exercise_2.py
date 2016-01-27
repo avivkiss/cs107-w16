@@ -24,8 +24,8 @@ def encrypt(k, x):
     return c
 
 """
-Specify a decryption algorithm decrypt such that SE = (K,E,D) is a symmetric
-encryption scheme
+1. [30 points] Specify a decryption algorithm decrypt such that SE = (K,E,D)
+is a symmetric encryption scheme
 """
 
 def decrypt(k, c):
@@ -40,8 +40,8 @@ def decrypt(k, c):
     pass
 
 """
-Show that this scheme is insecure by presenting a practical adversary such
-that the Adv(ind-cpa, SE, A) = 1 making only one LR query.
+2. [30 points] Show that this scheme is insecure by presenting a practical
+adversary such that the Adv(ind-cpa, SE, A) = 1 making only one LR query.
 """
 
 def A(lr):
@@ -60,12 +60,9 @@ def A(lr):
 
 
 """
-State the probability achieved by your adversary and the number of oracle calls
-it makes.
-
-probability:
-
-queries:
+3. [20 points] Provide a succinct analysis justifying the claimed advantage:
+--&--
+[Answer here.]
 """
 
 from crypto.games.game_lr import GameLR

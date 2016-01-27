@@ -32,9 +32,11 @@ def G(r):
     return _G
 
 """
-1. Show that G(1) is not a secure PRF by presenting a practical adversary A_1
-such that Adv(prf, F, A_1) = 1 - 2^-l. Fill in the code for adversary A, make
-only one fn query. Justify why your advantage is 1 - 2^-l.
+1. [30 points] Show that G(1) is not a secure PRF by presenting a practical
+adversary A_1 such that Adv(prf, F, A_1) = 1 - 2^-l. Fill in the code for
+adversary A, make only one fn query.
+
+[10 points] Justify why your advantage is 1 - 2^-l.
 --&--
 [Answer here].
 """
@@ -53,9 +55,10 @@ def A_1(fn):
     pass
 
 """
-2. Show that G(2) is not a secure PRF by presenting a practical adversary A_2
-such that Adv(prf, F, A_2) = 1 - 2^-l. Fill in the code for adversary A, make
-only two fn queries. Justify why your advantage is 1 - 2^-l.
+2. [30 points] Show that G(2) is not a secure PRF by presenting a practical
+adversary A_2 such that Adv(prf, F, A_2) = 1 - 2^-l. Fill in the code for adversary A, make only two fn queries. 
+
+[10 points] Justify why your advantage is 1 - 2^-l.
 --&--
 [Answer here].
 """
