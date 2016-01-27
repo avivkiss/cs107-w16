@@ -60,7 +60,7 @@ def A(lr):
 
 
 """
-3. [20 points] Provide a succinct analysis justifying the claimed advantage:
+3. [10 points] Provide a succinct analysis justifying the claimed advantage:
 --&--
 [Answer here.]
 """
