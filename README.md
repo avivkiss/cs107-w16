@@ -9,6 +9,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
     - exercise_1.py is optional
 - Symmetric Encryption  (Due **2/2** at 11:59 AM)
     - exercise_1.py is optional
+- Hash Functions (Due **2/11** at 11:59 PM)
 
 ## Getting Started
 To get started clone this repository with a `--recursive` flag:
