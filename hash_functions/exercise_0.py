@@ -30,7 +30,7 @@ def H(k, m):
     return y
 
 """
-[20 points] Show that H is not collision resistant by presenting a practical
+Show that H is not collision resistant by presenting a practical
 adversary (A) such that adv(cr, H, A) = 1. Note that the running time of
 the birthday attack is too large for it to be considered practical.
 """
