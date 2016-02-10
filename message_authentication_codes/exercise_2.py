@@ -12,7 +12,7 @@ Let D = { M (= {0, 1}* : 0 < |M| < n * 2^n and |M| mod n = 0}.
 Let tag: {0, 1}^k x D -> {0, 1}^n be defined as follows:
 """
 
-# Use n in bytes in code, in description 128.
+# Use n in bytes in code, in description bits.
 n = 16/8
 key_len = 32
 E = BlockCipher(key_len/2, n).encrypt
