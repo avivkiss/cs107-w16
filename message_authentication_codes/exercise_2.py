@@ -35,9 +35,10 @@ def V(k, m, t):
         return 0
 
 """
-Show that T is an insecure MAC by presenting a practical adversary (A) making
-q <= 2^(n/2) (n = 16) queries to the tag oracle (hint: try making 3 block
-queries) such that Adv(A) >= 0.3 * ((q)*(q-1)/2^n) (approximately 0.3).
+1. [40 points] Show that T is an insecure MAC by presenting a practical
+adversary (A) making q <= 2^(n/2) (n = 16) queries to the tag oracle
+(hint: try making 3 block queries) such that Adv(A) >= 0.3 * ((q)*(q-1)/2^n)
+(approximately 0.3).
 """
 
 def A(tag):
