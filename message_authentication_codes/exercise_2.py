@@ -3,8 +3,6 @@ from crypto.ideal.block_cipher import BlockCipher
 
 import collections, itertools, random
 
-from IPython import embed as debug
-
 """
 Let E: {0, 1}^k x {0, 1)^n -> {0, 1)^n be a block cipher with
 k, n = 32, 2 (in bytes).
