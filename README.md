@@ -12,6 +12,8 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 - Hash Functions (Due **2/11** at 11:59 PM)
 - Message Authentication Codes (Due **2/16** at 11:59 PM)
     - exercise_1.py is optional
+- Message Authentication Codes (Due **2/18** at 11:59 PM)
+    - exercise_1.py is optional
 
 ## Getting Started
 To get started clone this repository with a `--recursive` flag:
