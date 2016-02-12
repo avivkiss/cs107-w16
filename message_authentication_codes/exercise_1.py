@@ -19,7 +19,7 @@ def T(k, m):
     length_m = len(m)
 
     m = [None] + m + [int_to_string(length_m, n)]
-    c = ["\xFF" * n]
+    c = ["\x00" * n]
 
     for i in xrange(1, length_m + 2):
         c += [E(k, xor_strings(c[i - 1], m[i]))]
@@ -45,7 +45,6 @@ def A(tag):
     :param tag: This is an oracle supplied by GameUFCMA, you can call this
     oracle to get a "tag" for the data you pass into it.
     """
-
     return None, None
 
 from crypto.games.game_ufcma import GameUFCMA
