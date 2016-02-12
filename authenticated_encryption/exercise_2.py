@@ -5,7 +5,8 @@ from Crypto.Hash import HMAC, SHA
 import random
 
 """
-1. [45 points] Specify a (purely) SHA1-based (use HMAC-SHA1)
+1. [45 points] Specify a (purely) SHA1-based (“Purely SHA1 based” means SHA1
+is the only cryptographic primitive you may use, you may use HMAC-SHA1).
 IND-CPA+INT-CTXT-secure symmetric encryption scheme SE = (K, E, D) by giving
 Python code for the E and D (K is defined for you). You may use algorithms
 presented in slides as inspiration. Your scheme should be able to encrypt any
