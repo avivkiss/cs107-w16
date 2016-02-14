@@ -4,9 +4,9 @@ from crypto.ideal.block_cipher import BlockCipher
 import collections, itertools, random
 
 """
-Let E: {0, 1}^k x {0, 1)^n -> {0, 1)^n be a block cipher with
+Let E: {0, 1}^k/2 x {0, 1)^n -> {0, 1)^n be a block cipher with
 k, n = 32, 2 (in bytes).
-Let D = { M (= {0, 1}* : 0 < |M| < n * 2^n and |M| mod n = 0}.
+Let D = { M (= {20, 1}* : 0 < |M| < n * 2^n and |M| mod n = 0}.
 Let tag: {0, 1}^k x D -> {0, 1}^n be defined as follows:
 """
 
