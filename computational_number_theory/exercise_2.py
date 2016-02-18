@@ -8,7 +8,7 @@ Consider the following computational problem:
 Input: a, b, x, y where a, b, x, y are positive integers >= 0.
 Outpu: a^x * b^y
 
-Let k = max(bin_length(x), bin_length(y))
+Let k = max(bit_length(x), bit_length(y))
 
 1. [10 points] Consider the algorithm that first computes X = a^x, the
 computes Y = b^y, and returns XY. Explain why this has worst case cost of
