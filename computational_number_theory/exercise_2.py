@@ -64,4 +64,5 @@ def test_both(a, b, x, y):
 	return None
 
 if __name__ == '__main__':
+	# Just one example, our grader will test more than this. 
 	test_both(512, 256, 22222222, 22222222)
