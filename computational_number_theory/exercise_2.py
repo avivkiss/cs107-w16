@@ -63,8 +63,6 @@ def test_both(a, b, x, y, N):
 
 	print "Results matched?", n == m
 
-	sys.exit()
-
 
 if __name__ == '__main__':
 	# Just one example, our grader will test more than this.
