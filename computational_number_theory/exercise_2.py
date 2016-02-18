@@ -8,11 +8,11 @@ Consider the following computational problem:
 Input: a, b, x, y where a, b, x, y are positive integers >= 0.
 Outpu: a^x * b^y
 
-Let k = |N|.
+Let k = max(bin_length(x), bin_length(y))
 
 1. [10 points] Consider the algorithm that first computes X = a^x, the
-computes Y = b^y, and returns XY. Explain why this has worst case cost of 4k + 1
-multiplications modulo N.
+computes Y = b^y, and returns XY. Explain why this has worst case cost of
+4k + 1.
 --&--
 [Answer here.]
 """
@@ -64,5 +64,5 @@ def test_both(a, b, x, y):
 	return None
 
 if __name__ == '__main__':
-	# Just one example, our grader will test more than this. 
+	# Just one example, our grader will test more than this.
 	test_both(512, 256, 22222222, 22222222)
