@@ -15,6 +15,7 @@ Code and homework assignments for CSE 107 Winter 2016 @ UCSD
 - Authenticated Encryption (Due **2/18** at 11:59 PM)
     - exercise_1.py is optional
 - Computational Number Theory (Due **2/23** at 11:59 PM)
+- Asymmetric Encryption (Due **2/28** at 11:59 PM)
 
 ## Getting Started
 To get started clone this repository with a `--recursive` flag:
