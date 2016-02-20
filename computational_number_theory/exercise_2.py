@@ -7,7 +7,7 @@ Consider the following computational problem:
 
 Input: N, a, b, x, y where N >= 1 is an integer a, b (= Z*N and x, y are
 			 integers with 0 < x, y < N
-Outpu: a^x * b^y mod N
+Output: a^x * b^y mod N
 
 Let k = |N|
 
