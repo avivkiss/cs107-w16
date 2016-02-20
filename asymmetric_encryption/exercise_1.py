@@ -10,8 +10,8 @@ Based on slide 47.
 Let k be an integer and let K_{RSA} be an RSA generator with associated
 security parameter 8k. Assume that if (N, p, q, e, d) is an output of K_{RSA}
 then (p - 1)/2 and (q-1)/2 are primes larger than 2^2k. Let P denote the set
-of all odd primes smaller than 2^k. Consider the encryption and decryption
-algorithms below, where the message M is in Z*N:
+of all odd primes smaller than 2^k. Consider the key generation algorithm below
+algorithms below, where the message M is in Z*_{N}:
 """
 
 k = 64
@@ -46,8 +46,8 @@ def E(pk, m):
     return (exp(m, e, N), e)
 
 """
-1. [15 points] Prove that P is a subset or euqal to Z*phi(N) for any N output by
-K.
+1. [15 points] Prove that P is a subset or euqal to Z*_{phi(N)} for any (N, (N, p, q))
+output by K.
 --&--
 [Answer]
 """
@@ -59,7 +59,9 @@ is an asymmetric encryption scheme satisfying the correct decyption condition,
 and prove that this is indeed the case. Your code may invoke basic operators
 from Python (like +, *, /, %) and from the "crypto.tools" (like egcd and modinv)
 which you can assume to have the running time of those listed in the
-Computaitonal Number Theory slides and you should use part 1 above.
+Computational Number Theory slides. You should also use part 1 in your answer, 
+it should guide your algorithm as well as be an important part of your proof of 
+correctness. 
 --&--
 [Proof of correctness.]
 """
@@ -69,10 +71,9 @@ def D(sk, (c, e)):
 
 """
 3. Specify in Python an adversary A making one LR query and acheiving
-Adv(ind-cpa, AE, A) = 1. The messages int he LR query must both be in Z*N, and
-the running itme of A should be O(k), where k is the security parameter
-associated to K_{RSA} and the time taken by game procedures to execute is not
-counted in the time of A.
+Adv(ind-cpa, AE, A) = 1. The messages in the LR query must both be in Z*_{N},
+and the running itme of A should be O(k), and the time taken by game procedures
+to execute is not counted in the time of A.
 """
 
 def A(lr, pk):
