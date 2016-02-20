@@ -12,6 +12,11 @@ security parameter 8k. Assume that if (N, p, q, e, d) is an output of K_{RSA}
 then (p - 1)/2 and (q-1)/2 are primes larger than 2^2k. Let P denote the set
 of all odd primes smaller than 2^k. Consider the key generation algorithm below
 algorithms below, where the message M is in Z*_{N}:
+
+Note: Although p and q are fixed here your solutions in the entire exercise
+must work for any p and q with the given properties. I will use a different
+p and q in grading. You can use the commented out lines of code to generate
+other primes for testing. 
 """
 
 k = 64
@@ -59,9 +64,9 @@ is an asymmetric encryption scheme satisfying the correct decyption condition,
 and prove that this is indeed the case. Your code may invoke basic operators
 from Python (like +, *, /, %) and from the "crypto.tools" (like egcd and modinv)
 which you can assume to have the running time of those listed in the
-Computational Number Theory slides. You should also use part 1 in your answer, 
-it should guide your algorithm as well as be an important part of your proof of 
-correctness. 
+Computational Number Theory slides. You should also use part 1 in your answer,
+it should guide your algorithm as well as be an important part of your proof of
+correctness.
 --&--
 [Proof of correctness.]
 """
