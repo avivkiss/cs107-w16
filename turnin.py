@@ -72,6 +72,7 @@ turnin = []
 turnin.extend(glob.glob(os.path.join(problem_set, '*.pdf')))
 turnin.extend(glob.glob(os.path.join(problem_set, '*.txt')))
 turnin.extend(glob.glob(os.path.join(problem_set, '*.py')))
+turnin.extend(glob.glob(os.path.join(problem_set, '*.md')))
 turnin.append('student_info.json')
 
 tar = tarfile.open(os.path.join(problem_set, problem_set+".tar"), 'w')
